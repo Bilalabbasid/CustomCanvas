@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { apiService } from '../services/api';
+import { staticProjects } from '../data/staticProjects';
 
 interface Project {
   _id: string;
@@ -55,11 +56,43 @@ export const useProjects = (params?: {
       try {
         setLoading(true);
         setError(null);
-        const response = await apiService.getProjects(params);
+        
+        // Try to fetch from API first
+        const response = await apiService.getProjects(params) as ProjectsResponse;
         setData(response);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to fetch projects');
-        console.error('Error fetching projects:', err);
+        console.warn('API not available, using static data:', err);
+        
+        // Fallback to static data
+        let filteredProjects = [...staticProjects];
+        
+        // Apply category filter
+        if (params?.category && params.category !== 'all') {
+          filteredProjects = filteredProjects.filter(p => p.category === params.category);
+        }
+        
+        // Apply featured filter
+        if (params?.featured !== undefined) {
+          filteredProjects = filteredProjects.filter(p => p.featured === params.featured);
+        }
+        
+        // Apply search filter
+        if (params?.search) {
+          const searchTerm = params.search.toLowerCase();
+          filteredProjects = filteredProjects.filter(p => 
+            p.title.toLowerCase().includes(searchTerm) ||
+            p.description.toLowerCase().includes(searchTerm) ||
+            p.tech.some(tech => tech.toLowerCase().includes(searchTerm))
+          );
+        }
+        
+        setData({
+          projects: filteredProjects,
+          totalPages: 1,
+          currentPage: 1,
+          total: filteredProjects.length
+        });
+        setError(null); // Clear error since we have fallback data
       } finally {
         setLoading(false);
       }
@@ -83,11 +116,21 @@ export const useProject = (slug: string) => {
       try {
         setLoading(true);
         setError(null);
-        const response = await apiService.getProject(slug);
+        
+        // Try API first
+        const response = await apiService.getProject(slug) as Project;
         setProject(response);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to fetch project');
-        console.error('Error fetching project:', err);
+        console.warn('API not available, using static data:', err);
+        
+        // Fallback to static data
+        const staticProject = staticProjects.find(p => p.slug === slug);
+        if (staticProject) {
+          setProject(staticProject);
+          setError(null);
+        } else {
+          setError('Project not found');
+        }
       } finally {
         setLoading(false);
       }
