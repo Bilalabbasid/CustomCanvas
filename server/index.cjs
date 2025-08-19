@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3001;
 app.use(helmet());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-domain.com'] 
+    ? ['https://custom-canvas-peach.vercel.app', 'https://bilalabbasid.github.io'] 
     : [
         'http://localhost:5173',
         'http://localhost:5174', 
@@ -79,3 +79,6 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📊 Environment: ${process.env.NODE_ENV}`);
 });
+
+// Export for Vercel serverless functions
+module.exports = app;

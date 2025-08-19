@@ -177,23 +177,6 @@ const seedProjects = [
 
   // BACKEND PROJECTS (10)
   {
-    title: 'Propdispatch',
-    slug: 'propdispatch',
-    description: 'Real-time multi-tenant sand job & load tracking system.',
-    longDescription: 'Propdispatch is a sophisticated logistics platform that provides real-time tracking and management of sand jobs and load dispatching across multiple tenants.',
-    responsibilities: ['Backend development', 'GCP Cloud Functions', 'Complex SQL queries'],
-    url: 'https://propdispatch.com',
-    category: 'backend',
-    type: 'public',
-    tech: ['Node.js', 'GCP', 'PostgreSQL', 'Real-time'],
-    featured: true,
-    client: {
-      name: 'PropDispatch LLC',
-      industry: 'Logistics',
-      size: 'Mid-size'
-    }
-  },
-  {
     title: 'Atrios',
     slug: 'atrios',
     description: 'Cloud-based network security platform with DNS filtering, DDoS protection, and traffic analytics.',
@@ -208,6 +191,23 @@ const seedProjects = [
       name: 'Atrios Security',
       industry: 'Cybersecurity',
       size: 'Enterprise'
+    }
+  },
+  {
+    title: 'Propdispatch',
+    slug: 'propdispatch',
+    description: 'Real-time multi-tenant sand job & load tracking system.',
+    longDescription: 'Propdispatch is a sophisticated logistics platform that provides real-time tracking and management of sand jobs and load dispatching across multiple tenants.',
+    responsibilities: ['Backend development', 'GCP Cloud Functions', 'Complex SQL queries'],
+    url: 'https://propdispatch.com',
+    category: 'backend',
+    type: 'public',
+    tech: ['Node.js', 'GCP', 'PostgreSQL', 'Real-time'],
+    featured: true,
+    client: {
+      name: 'PropDispatch LLC',
+      industry: 'Logistics',
+      size: 'Mid-size'
     }
   },
   {
