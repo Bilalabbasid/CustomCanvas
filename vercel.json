@@ -7,9 +7,17 @@
       "config": {
         "distDir": "dist"
       }
+    },
+    {
+      "src": "server/index.cjs",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/index.cjs"
+    },
     {
       "handle": "filesystem"
     },
@@ -18,5 +26,13 @@
       "dest": "/index.html"
     }
   ],
-  "buildCommand": "npm run build"
+  "buildCommand": "npm run build",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "server/index.cjs": {
+      "maxDuration": 30
+    }
+  }
 }

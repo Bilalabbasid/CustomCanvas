@@ -22,6 +22,66 @@ export const staticProjects = [
   },
   {
     _id: '2',
+    title: 'IntellicV - AI Resume Assistant',
+    slug: 'intellicv-ai-assistant',
+    description: 'GPT-powered AI resume assistant that helps users update their resumes naturally through conversational interface.',
+    longDescription: 'IntellicV is an intelligent resume assistant powered by GPT that allows users to update their resumes through natural conversation. Users can simply tell the AI what they want to change, such as updating job titles, adding experiences, or modifying skills, and the AI handles the formatting and optimization automatically.',
+    responsibilities: ['GPT API integration', 'Natural language processing', 'Resume parsing and generation', 'User authentication system'],
+    url: 'https://intellicv-ai-assistant-1.onrender.com/',
+    category: 'web',
+    type: 'public' as const,
+    tech: ['React', 'Node.js', 'GPT API', 'Express', 'MongoDB', 'Authentication', 'NLP', 'PDF Generation'],
+    featured: true,
+    client: {
+      name: 'IntellicV Technologies',
+      industry: 'AI/HR Tech',
+      size: 'Startup'
+    },
+    createdAt: '2024-01-05T00:00:00.000Z',
+    updatedAt: '2024-01-05T00:00:00.000Z'
+  },
+  {
+    _id: '3',
+    title: 'LastChance Ticket - Event Booking Platform',
+    slug: 'lastchance-ticket-booking',
+    description: 'Comprehensive event ticket booking platform with real-time inventory, payment processing, and event management.',
+    longDescription: 'LastChance Ticket is a full-featured event booking platform that handles ticket sales, event management, real-time inventory tracking, secure payment processing, and customer management. The platform supports multiple event types and provides comprehensive analytics for event organizers.',
+    responsibilities: ['Full-stack development', 'Payment gateway integration', 'Real-time inventory management', 'Event management system'],
+    url: 'https://www.lastchanceticket.com/',
+    category: 'web',
+    type: 'public' as const,
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe', 'Real-time', 'Payment Processing', 'Event Management'],
+    featured: true,
+    client: {
+      name: 'LastChance Events',
+      industry: 'Event Management',
+      size: 'Mid-size'
+    },
+    createdAt: '2024-01-10T00:00:00.000Z',
+    updatedAt: '2024-01-10T00:00:00.000Z'
+  },
+  {
+    _id: '4',
+    title: 'Calorie Tracker - Nutrition Monitoring App',
+    slug: 'calorie-tracker-app',
+    description: 'Smart calorie counting and nutrition tracking application with food database and health analytics.',
+    longDescription: 'A comprehensive calorie tracking application that helps users monitor their daily nutrition intake, track calories, analyze eating patterns, and achieve health goals. Features include extensive food database, barcode scanning, meal planning, and detailed nutritional analytics.',
+    responsibilities: ['Frontend development', 'Nutrition database integration', 'Health analytics dashboard', 'User experience optimization'],
+    url: 'https://5b0534f1.calorie-tracker-2vp.pages.dev/',
+    category: 'web',
+    type: 'public' as const,
+    tech: ['React', 'JavaScript', 'Nutrition APIs', 'Charts.js', 'Local Storage', 'PWA', 'Health Analytics'],
+    featured: true,
+    client: {
+      name: 'HealthTech Solutions',
+      industry: 'Health & Fitness',
+      size: 'Startup'
+    },
+    createdAt: '2024-01-12T00:00:00.000Z',
+    updatedAt: '2024-01-12T00:00:00.000Z'
+  },
+  {
+    _id: '5',
     title: 'StreamFlix - Video Streaming Platform',
     slug: 'streamflix-platform',
     description: 'Netflix-like streaming platform with real-time video processing, adaptive bitrate streaming, and CDN integration.',
@@ -41,7 +101,7 @@ export const staticProjects = [
     updatedAt: '2024-01-15T00:00:00.000Z'
   },
   {
-    _id: '3',
+    _id: '6',
     title: 'CryptoTrade Pro - Trading Dashboard',
     slug: 'cryptotrade-dashboard',
     description: 'Advanced cryptocurrency trading platform with real-time charts, algorithmic trading, and portfolio management.',
@@ -61,7 +121,7 @@ export const staticProjects = [
     updatedAt: '2024-02-01T00:00:00.000Z'
   },
   {
-    _id: '4',
+    _id: '7',
     title: 'EduPortal - Learning Management System',
     slug: 'eduportal-lms',
     description: 'Comprehensive LMS with interactive video lessons, real-time collaboration, and AI-powered progress tracking.',
@@ -81,7 +141,7 @@ export const staticProjects = [
     updatedAt: '2024-02-15T00:00:00.000Z'
   },
   {
-    _id: '5',
+    _id: '8',
     title: 'HealthConnect - Telemedicine Platform',
     slug: 'healthconnect-telemedicine',
     description: 'HIPAA-compliant telemedicine platform with video consultations, prescription management, and EHR integration.',
@@ -103,7 +163,27 @@ export const staticProjects = [
 
   // BACKEND PROJECTS
   {
-    _id: '6',
+    _id: '9',
+    title: 'Atrios',
+    slug: 'atrios',
+    description: 'Cloud-based network security platform with DNS filtering, DDoS protection, and traffic analytics.',
+    longDescription: 'Atrios is an enterprise-grade network security platform that provides comprehensive protection through DNS filtering, DDoS mitigation, and advanced traffic analytics.',
+    responsibilities: ['Backend team lead', 'DNSDist + KnotDNS setup', 'Analytics via ClickHouse'],
+    url: 'https://atrios.io',
+    category: 'backend',
+    type: 'public' as const,
+    tech: ['Go', 'ClickHouse', 'DNS', 'Security'],
+    featured: true,
+    client: {
+      name: 'Atrios Security',
+      industry: 'Cybersecurity',
+      size: 'Enterprise'
+    },
+    createdAt: '2024-03-15T00:00:00.000Z',
+    updatedAt: '2024-03-15T00:00:00.000Z'
+  },
+  {
+    _id: '10',
     title: 'Propdispatch',
     slug: 'propdispatch',
     description: 'Real-time multi-tenant sand job & load tracking system.',
@@ -119,11 +199,11 @@ export const staticProjects = [
       industry: 'Logistics',
       size: 'Mid-size'
     },
-    createdAt: '2024-03-15T00:00:00.000Z',
-    updatedAt: '2024-03-15T00:00:00.000Z'
+    createdAt: '2024-04-01T00:00:00.000Z',
+    updatedAt: '2024-04-01T00:00:00.000Z'
   },
   {
-    _id: '7',
+    _id: '8',
     title: 'Atrios',
     slug: 'atrios',
     description: 'Cloud-based network security platform with DNS filtering, DDoS protection, and traffic analytics.',

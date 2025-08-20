@@ -1,23 +1,25 @@
-# Deployment Guide
+# Full Stack Portfolio - Vercel Deployment Guide
 
-## Deployment Options
+## 🚀 Deployment Steps for Vercel Full-Stack
 
-### Option 1: Frontend on Netlify + Backend on Railway/Render
+### 1. Database Setup (MongoDB Atlas)
+1. Create account at [MongoDB Atlas](https://www.mongodb.com/atlas)
+2. Create a new cluster
+3. Get your connection string: `mongodb+srv://username:password@cluster.mongodb.net/portfolio`
 
-#### Frontend (Netlify)
-1. Push code to GitHub
-2. Connect Netlify to your GitHub repo
-3. Build settings:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-   - Environment variables: `VITE_API_URL=https://your-backend-url.com/api`
+### 2. Vercel Environment Variables
+Add these environment variables in your Vercel dashboard:
 
-#### Backend (Railway)
-1. Connect Railway to your GitHub repo
-2. Environment variables:
-   - `MONGODB_URI`: Your MongoDB Atlas connection string
-   - `NODE_ENV`: production
-   - `PORT`: (Railway will set this automatically)
+```bash
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/portfolio
+JWT_SECRET=your-super-secure-production-jwt-secret-here
+NODE_ENV=production
+```
+
+### 3. Deploy to Vercel
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the configuration from `vercel.json`
+3. Deploy!
 
 ### Option 2: Full Stack on Vercel
 
