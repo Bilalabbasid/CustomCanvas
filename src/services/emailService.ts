@@ -26,6 +26,16 @@ export const emailService = {
    * Send contact form email using EmailJS
    */
   async sendContactEmail(formData: ContactFormData): Promise<EmailResponse> {
+    // Check if EmailJS is properly configured
+    if (EMAILJS_PUBLIC_KEY === 'your_public_key' || 
+        EMAILJS_SERVICE_ID === 'service_portfolio' || 
+        EMAILJS_TEMPLATE_ID === 'template_contact') {
+      return {
+        success: false,
+        message: 'Email service not configured. Please set up EmailJS credentials.'
+      };
+    }
+
     try {
       // Template parameters that will be sent to your email template
       const templateParams = {
@@ -54,6 +64,15 @@ export const emailService = {
       }
     } catch (error) {
       console.error('EmailJS Error:', error);
+      
+      // Check if it's a template not found error
+      if (error instanceof Error && error.message.includes('template ID not found')) {
+        return {
+          success: false,
+          message: 'Email template not found. Please create the template "template_contact" in your EmailJS dashboard.'
+        };
+      }
+      
       return {
         success: false,
         message: 'Failed to send email. Please try again or contact us directly.'

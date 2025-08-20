@@ -95,7 +95,7 @@ const Projects: React.FC = () => {
           >
             {projects.map((project, index) => (
               <motion.div
-                key={project._id}
+                key={project._id || `project-${index}`}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -114,15 +114,16 @@ const Projects: React.FC = () => {
                         <GlobeAltIcon className="h-5 w-5 text-green-500" />
                       )}
                       {project.url && (
-                        <a
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            window.open(project.url, '_blank', 'noopener,noreferrer');
+                          }}
                           className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300"
                         >
                           <ArrowTopRightOnSquareIcon className="h-5 w-5" />
-                        </a>
+                        </button>
                       )}
                     </div>
                   </div>
