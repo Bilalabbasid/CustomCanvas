@@ -14,6 +14,9 @@ export interface ContactFormData {
   name: string;
   email: string;
   message: string;
+  company?: string;
+  project?: string;
+  budget?: string;
 }
 
 export interface EmailResponse {
@@ -42,6 +45,9 @@ export const emailService = {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
+        company: formData.company || 'Not specified',
+        project: formData.project || 'Not specified', 
+        budget: formData.budget || 'Not specified',
         to_name: 'Bilal Abbasi', // Your name
         to_email: 'abbasi.bilal2000@gmail.com', // Your email
         reply_to: formData.email,
