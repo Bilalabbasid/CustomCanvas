@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { EnvelopeIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline';
-import { apiService } from '../services/api';
+import { emailService } from '../services/emailService';
+import { useToast } from '../hooks/useToast';
+import Toast from './Toast';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -10,22 +12,31 @@ const Contact: React.FC = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast, showSuccess, showError, hideToast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     try {
-      await apiService.submitContact(formData);
-      alert('Thank you for your message! We\'ll get back to you soon.');
-      setFormData({
-        name: '',
-        email: '',
-        message: ''
-      });
+      const result = await emailService.sendContactEmail(formData);
+      
+      if (result.success) {
+        showSuccess('🎉 Message sent successfully! I\'ll get back to you within 24 hours.');
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+        
+        // Also send auto-reply (optional)
+        await emailService.sendAutoReply(formData);
+      } else {
+        showError(result.message);
+      }
     } catch (error) {
       console.error('Contact form error:', error);
-      alert('Sorry, there was an error sending your message. Please try again.');
+      showError('Sorry, there was an error sending your message. Please try again or email me directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -39,7 +50,15 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50 dark:bg-gray-800">
+    <>
+      <Toast
+        message={toast.message}
+        type={toast.type}
+        isVisible={toast.isVisible}
+        onClose={hideToast}
+        duration={6000}
+      />
+      <section id="contact" className="py-24 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -77,7 +96,7 @@ const Contact: React.FC = () => {
 
             <div className="space-y-6">
               <motion.a
-                href="mailto:abbasi.bilal2000@gmail.com"
+                href="mailto:abbasi.bilal2000@gmail.com?subject=Portfolio Contact - Let's Work Together"
                 whileHover={{ scale: 1.02 }}
                 className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-700"
               >
@@ -196,6 +215,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
