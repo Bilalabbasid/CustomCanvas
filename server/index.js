@@ -7,8 +7,8 @@ require('dotenv').config();
 
 
 const projectRoutes = require('./routes/projects');
-const contactRoutes = require('./routes/contact');
-const leadRoutes = require('./routes/leads');
+const contactRoutes = require('./routes/contact.cjs');
+const leadRoutes = require('./routes/leads.cjs');
 
 const app = express();
 const PORT = process.env.PORT || 3001;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline';
-import { apiService } from '../services/api';
+import { emailService } from '../services/emailService';
 
 const LeadGeneration: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -27,15 +27,40 @@ const LeadGeneration: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      await apiService.submitLead(formData);
-      alert('Thank you! We\'ll be in touch within 24 hours.');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        project: '',
-        budget: ''
+      console.log('🚀 Submitting lead generation form:', formData);
+      
+      // Use emailService to send the proposal request
+      const result = await emailService.sendContactEmail({
+        name: formData.name,
+        email: formData.email,
+        message: `🎯 PROJECT PROPOSAL REQUEST
+
+Project Description:
+${formData.project}
+
+📊 Project Details:
+• Company: ${formData.company || 'Not specified'}
+• Budget Range: ${formData.budget || 'Not specified'}
+• Contact: ${formData.name} (${formData.email})
+
+Please send me a detailed proposal for this project including timeline, deliverables, and next steps.`,
+        company: formData.company,
+        project: formData.project,
+        budget: formData.budget
       });
+
+      if (result.success) {
+        alert('Thank you! We\'ll send you a detailed proposal within 24 hours.');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          project: '',
+          budget: ''
+        });
+      } else {
+        throw new Error(result.message || 'Failed to submit proposal request');
+      }
     } catch (error) {
       console.error('Lead form error:', error);
       alert('Sorry, there was an error submitting your request. Please try again.');

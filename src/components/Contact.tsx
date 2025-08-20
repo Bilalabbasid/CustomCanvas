@@ -5,6 +5,12 @@ import { emailService } from '../services/emailService';
 import { useToast } from '../hooks/useToast';
 import Toast from './Toast';
 
+// Debug: Check environment variables
+console.log('🔍 Environment Variables Check:');
+console.log('- SERVICE_ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
+console.log('- TEMPLATE_ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+console.log('- PUBLIC_KEY:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY ? '✓ Present' : '❌ Missing');
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,33 +18,40 @@ const Contact: React.FC = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleEmailClick = () => {
+    navigator.clipboard.writeText('abbasi.bilal2000@gmail.com');
+  };
   const { toast, showSuccess, showError, hideToast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('📝 Form submitted with data:', formData);
     setIsSubmitting(true);
     
     try {
+      console.log('🚀 Calling emailService.sendContactEmail...');
       const result = await emailService.sendContactEmail(formData);
+      console.log('📬 Email service result:', result);
       
       if (result.success) {
+        console.log('✅ Email sent successfully');
         showSuccess('🎉 Message sent successfully! I\'ll get back to you within 24 hours.');
         setFormData({
           name: '',
           email: '',
           message: ''
         });
-        
-        // Also send auto-reply (optional)
-        await emailService.sendAutoReply(formData);
       } else {
+        console.error('❌ Email failed:', result.message);
         showError(result.message);
       }
     } catch (error) {
-      console.error('Contact form error:', error);
+      console.error('💥 Contact form error:', error);
       showError('Sorry, there was an error sending your message. Please try again or email me directly.');
     } finally {
       setIsSubmitting(false);
+      console.log('🏁 Form submission completed');
     }
   };
 
@@ -95,19 +108,36 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="space-y-6">
-              <motion.a
-                href="mailto:abbasi.bilal2000@gmail.com?subject=Portfolio Contact - Let's Work Together"
+              <motion.div
+                onClick={handleEmailClick}
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-700"
+                className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-700 cursor-pointer group"
+                title="Click to send email"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
                   <EnvelopeIcon className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</p>
-                  <p className="text-lg font-semibold text-gray-900 dark:text-white">abbasi.bilal2000@gmail.com</p>
+                  <p className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors duration-200 underline decoration-2 decoration-indigo-300 hover:decoration-indigo-500">
+                    abbasi.bilal2000@gmail.com
+                  </p>
+                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    Click to copy email address
+                  </p>
+                  <div className="flex gap-2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigator.clipboard.writeText('abbasi.bilal2000@gmail.com');
+                      }}
+                      className="text-xs bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 px-2 py-1 rounded hover:bg-indigo-200 dark:hover:bg-indigo-800 transition-colors"
+                    >
+                      Copy
+                    </button>
+                  </div>
                 </div>
-              </motion.a>
+              </motion.div>
 
               <motion.a
                 href="https://www.linkedin.com/in/bilal-abbasid2000"
