@@ -1,4 +1,4 @@
-name: Deploy Full Stack
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -23,15 +23,16 @@ jobs:
 
     - name: Build frontend
       run: npm run build
+      env:
+        VITE_API_URL: https://your-backend-url.com/api
+        VITE_EMAILJS_SERVICE_ID: service_defm7jo
+        VITE_EMAILJS_TEMPLATE_ID: template_g19gj5k
+        VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID: template_contact
+        VITE_EMAILJS_PUBLIC_KEY: ZX9xd01KKe1e2OW0h
 
-    - name: Run tests (if any)
-      run: npm test --if-present
-
-    - name: Deploy to Vercel
-      uses: amondnet/vercel-action@v25
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
       with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        vercel-args: '--prod'
-        vercel-org-id: ${{ secrets.ORG_ID }}
-        vercel-project-id: ${{ secrets.PROJECT_ID }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
