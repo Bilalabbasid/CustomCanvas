@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             onClick={() => navigate('/')}
           >
             <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Muhammad Bilal
+              Arshad Ali
             </h1>
           </motion.div>
 
