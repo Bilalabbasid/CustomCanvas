@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-4">
-              Custom Canvas
+              Code World
             </h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               We build smart software for a smarter future. Specializing in scalable, AI-powered, 
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
           className="border-t border-gray-800 mt-8 pt-8 text-center"
         >
           <p className="text-gray-400">
-            © {currentYear} Custom Canvas. All rights reserved. Built with React, TypeScript, and Tailwind CSS.
+            © {currentYear} Code World. All rights reserved. Built with React, TypeScript, and Tailwind CSS.
           </p>
         </motion.div>
       </div>

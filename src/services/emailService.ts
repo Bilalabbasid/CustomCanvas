@@ -86,7 +86,7 @@ export const emailService = {
         reply_to: formData.email,      // {{reply_to}} - reply address
         
         // Recipient details (your information)
-        to_name: 'Bilal Abbasi',
+        to_name: 'Code World Team',
         to_email: 'abbasi.bilal2000@gmail.com',
         
         // Additional metadata
@@ -115,7 +115,7 @@ export const emailService = {
               // Standard EmailJS auto-reply parameters
               to_email: formData.email,           // Send TO the user
               user_name: formData.name,           // User's name for greeting
-              from_name: 'Bilal Abbasi',          // Your name
+              from_name: 'Code World Team',          // Your name
               from_email: 'abbasi.bilal2000@gmail.com', // Your email
               reply_message: `Thank you for contacting me, ${formData.name}! I have received your message and will get back to you within 24 hours.`,
               
@@ -174,8 +174,8 @@ export const emailService = {
       const autoReplyParams = {
         to_name: formData.name,
         to_email: formData.email,
-        from_name: 'Bilal Abbasi',
-        message: `Hi ${formData.name},\n\nThank you for reaching out! I've received your message and will get back to you within 24 hours.\n\nBest regards,\nBilal Abbasi`
+        from_name: 'Code World Team',
+        message: `Hi ${formData.name},\n\nThank you for reaching out! I've received your message and will get back to you within 24 hours.\n\nBest regards,\nCode World Team`
       };
 
       // You can create a separate template for auto-replies

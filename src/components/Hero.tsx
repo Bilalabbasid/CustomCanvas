@@ -35,9 +35,9 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight"
           >
-            <span className="block">Custom</span>
+            <span className="block">Code</span>
             <span className="block bg-gradient-to-r from-indigo-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">
-              Canvas
+              World
             </span>
           </motion.h1>
 
