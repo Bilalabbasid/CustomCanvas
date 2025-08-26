@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowTopRightOnSquareIcon, ServerIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import { useProjects } from '../hooks/useProjects';
+import { staticProjects } from '../data/staticProjects';
 import { Link } from 'react-router-dom';
 
 const Projects: React.FC = () => {
@@ -45,7 +46,44 @@ const Projects: React.FC = () => {
     );
   }
 
-  const projects = data?.projects || [];
+  const dynamicProjects = data?.projects || [];
+
+  // Merge logic: prefer static entries when duplicates exist (by slug), then include dynamic.
+  type ProjectType = {
+    _id?: string;
+    slug?: string;
+    title?: string;
+    description?: string;
+    responsibilities?: string[];
+    tech?: string[];
+    category?: string;
+    featured?: boolean;
+    url?: string;
+    type?: string;
+  };
+
+  const mergedBySlug: Record<string, ProjectType> = {};
+
+  // Add static first (gives priority), then dynamic if missing
+  ([...staticProjects, ...dynamicProjects] as ProjectType[]).forEach((p) => {
+    const key = (p as ProjectType).slug || (p as ProjectType)._id || JSON.stringify(p);
+    if (!mergedBySlug[key]) mergedBySlug[key] = p as ProjectType;
+  });
+
+  // Convert back to array
+  const allMergedProjects = Object.values(mergedBySlug) as ProjectType[];
+
+  // Sort: featured projects that have a real url should appear at the top
+  // Sort: projects with a real url first, then featured ones, then the rest
+  allMergedProjects.sort((a, b) => {
+    const aScore = (a.url ? 2 : 0) + (a.featured ? 1 : 0);
+    const bScore = (b.url ? 2 : 0) + (b.featured ? 1 : 0);
+    return bScore - aScore;
+  });
+
+  const projects = filter === 'all'
+    ? allMergedProjects
+    : allMergedProjects.filter((p) => p.category === filter);
 
   return (
     <section id="projects" className="py-24 bg-white dark:bg-gray-900">
@@ -135,7 +173,7 @@ const Projects: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Key Responsibilities:</h4>
                     <ul className="space-y-1">
-                      {project.responsibilities.map((resp, idx) => (
+                      {(project.responsibilities || []).map((resp: string, idx: number) => (
                         <li key={idx} className="flex items-start text-xs text-gray-500 dark:text-gray-400">
                           <div className="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2 mt-1.5 flex-shrink-0"></div>
                           {resp}
@@ -145,7 +183,7 @@ const Projects: React.FC = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
+                    {(project.tech || []).map((tech: string) => (
                       <span
                         key={tech}
                         className="px-2 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 text-xs rounded-lg font-medium"

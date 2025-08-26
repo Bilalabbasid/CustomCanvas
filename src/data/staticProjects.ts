@@ -1,4 +1,4 @@
-export const staticProjects = [
+const rawStaticProjects = [
   // WEB DEVELOPMENT PROJECTS
   {
     _id: '1',
@@ -81,55 +81,15 @@ export const staticProjects = [
     updatedAt: '2024-01-12T00:00:00.000Z'
   },
   {
-    _id: '5',
-    title: 'StreamFlix - Video Streaming Platform',
-    slug: 'streamflix-platform',
-    description: 'Netflix-like streaming platform with real-time video processing, adaptive bitrate streaming, and CDN integration.',
-    longDescription: 'A comprehensive video streaming platform built with microservices architecture, featuring real-time video transcoding, adaptive bitrate streaming, content recommendation engines, and global CDN distribution for millions of users.',
-    responsibilities: ['Microservices architecture design', 'Video transcoding pipeline', 'CDN integration with Cloudflare', 'Redis caching strategy'],
-    url: 'https://streamflix-demo.com',
-    category: 'web',
-    type: 'public' as const,
-    tech: ['React', 'Next.js', 'TypeScript', 'Node.js', 'FFmpeg', 'Redis', 'PostgreSQL', 'Docker', 'Kubernetes', 'AWS S3', 'CloudFront'],
-    featured: true,
-    client: {
-      name: 'StreamFlix Inc.',
-      industry: 'Entertainment',
-      size: 'Enterprise'
-    },
-    createdAt: '2024-01-15T00:00:00.000Z',
-    updatedAt: '2024-01-15T00:00:00.000Z'
-  },
-  {
-    _id: '6',
-    title: 'CryptoTrade Pro - Trading Dashboard',
-    slug: 'cryptotrade-dashboard',
-    description: 'Advanced cryptocurrency trading platform with real-time charts, algorithmic trading, and portfolio management.',
-    longDescription: 'Professional-grade cryptocurrency trading platform featuring real-time WebSocket data feeds, advanced charting with TradingView integration, algorithmic trading bots, portfolio analytics, and multi-exchange connectivity.',
-    responsibilities: ['Real-time WebSocket architecture', 'Trading algorithm implementation', 'Chart.js custom indicators', 'Multi-exchange API integration'],
-    url: 'https://cryptotrade-pro.com',
-    category: 'web',
-    type: 'public' as const,
-    tech: ['React', 'TypeScript', 'WebSocket', 'Chart.js', 'TradingView', 'Node.js', 'Redis', 'MongoDB', 'Docker', 'CCXT'],
-    featured: true,
-    client: {
-      name: 'CryptoTrade Solutions',
-      industry: 'FinTech',
-      size: 'Mid-size'
-    },
-    createdAt: '2024-02-01T00:00:00.000Z',
-    updatedAt: '2024-02-01T00:00:00.000Z'
-  },
-  {
     _id: '7',
     title: 'EduPortal - Learning Management System',
     slug: 'eduportal-lms',
-    description: 'Comprehensive LMS with interactive video lessons, real-time collaboration, and AI-powered progress tracking.',
-    longDescription: 'Modern learning management system featuring interactive video lessons with annotations, real-time collaborative whiteboards, AI-powered student progress analytics, automated grading systems, and virtual classroom capabilities.',
-    responsibilities: ['Video streaming optimization', 'Real-time collaboration features', 'AI analytics integration', 'Progressive Web App development'],
-    url: 'https://eduportal-lms.com',
-    category: 'web',
-    type: 'public' as const,
+  description: 'Private LMS deployment customized for a university, offering secure course delivery, grading, and campus integrations.',
+  longDescription: 'EduPortal is configured as a private, university-deployed learning management system. It provides secure access controls, campus SSO integration, private hosting, and tailored analytics for university administrators and instructors.',
+  responsibilities: ['Private university deployment', 'SSO & campus integrations', 'Customized admin dashboards', 'On-prem / VPC hosting'],
+  // No public url for private university deployment
+  category: 'web',
+  type: 'private' as const,
     tech: ['React', 'Next.js', 'TypeScript', 'WebRTC', 'Socket.io', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'TensorFlow.js'],
     featured: true,
     client: {
@@ -143,14 +103,15 @@ export const staticProjects = [
   {
     _id: '8',
     title: 'HealthConnect - Telemedicine Platform',
-    slug: 'healthconnect-telemedicine',
-    description: 'HIPAA-compliant telemedicine platform with video consultations, prescription management, and EHR integration.',
-    longDescription: 'Secure telemedicine platform enabling remote patient consultations with encrypted video calls, digital prescription management, electronic health record integration, appointment scheduling, and real-time health monitoring dashboards.',
-    responsibilities: ['HIPAA compliance implementation', 'End-to-end encryption', 'EHR system integration', 'Video call optimization'],
-    url: 'https://healthconnect-platform.com',
-    category: 'web',
-    type: 'public' as const,
-    tech: ['React', 'TypeScript', 'WebRTC', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'FHIR', 'Twilio', 'Stripe'],
+  slug: 'healthconnect-telemedicine',
+  description: 'HIPAA-compliant telemedicine mobile app offering video consultations, messaging, and appointment management.',
+  longDescription: 'HealthConnect is a HIPAA-focused mobile application designed for patients to book and conduct secure video consultations, manage prescriptions, and communicate with providers. The app targets mobile-first care delivery and integrates with backend EHR systems where required.',
+  responsibilities: ['Mobile app development', 'HIPAA compliance', 'Secure video & messaging', 'Prescription and appointment flows'],
+  // Keep a listing url if available, otherwise can be omitted
+  url: 'https://healthconnect-platform.com',
+  category: 'mobile',
+  type: 'public' as const,
+  tech: ['React Native', 'TypeScript', 'WebRTC', 'Node.js', 'Twilio', 'FHIR', 'Stripe'],
     featured: true,
     client: {
       name: 'HealthTech Solutions',
@@ -315,25 +276,6 @@ export const staticProjects = [
     updatedAt: '2024-06-15T00:00:00.000Z'
   },
   {
-    _id: '13',
-    title: 'StreamAnalytics - Real-time Data Processing',
-    slug: 'stream-analytics-platform',
-    description: 'High-throughput streaming analytics platform processing millions of events per second.',
-    longDescription: 'Real-time streaming analytics platform capable of processing millions of events per second with complex event processing, stream joins, windowing operations, and real-time alerting capabilities.',
-    responsibilities: ['Stream processing architecture', 'Complex event processing', 'Real-time alerting system', 'Performance tuning'],
-    category: 'data',
-    type: 'private' as const,
-    tech: ['Apache Kafka', 'Apache Flink', 'Apache Storm', 'ClickHouse', 'Redis', 'Python', 'Scala', 'Docker', 'Kubernetes'],
-    featured: true,
-    client: {
-      name: 'StreamTech Solutions',
-      industry: 'Real-time Analytics',
-      size: 'Enterprise'
-    },
-    createdAt: '2024-07-01T00:00:00.000Z',
-    updatedAt: '2024-07-01T00:00:00.000Z'
-  },
-  {
     _id: '14',
     title: 'RetailAnalytics - Customer Behavior Platform',
     slug: 'retail-analytics-platform',
@@ -355,20 +297,6 @@ export const staticProjects = [
 
   // AI/ML PROJECTS
   {
-    _id: '15',
-    title: 'Real-Time Anomaly Detection',
-    slug: 'real-time-anomaly-detection',
-    description: 'Detects zero-day threats using logs from Zeek, Kafka, and self-supervised AI models.',
-    longDescription: 'An advanced cybersecurity system that uses machine learning to detect zero-day threats in real-time by analyzing network logs and traffic patterns.',
-    responsibilities: ['Python-based detection engine', 'Real-time pipeline + alerting'],
-    category: 'ai',
-    type: 'private' as const,
-    tech: ['Python', 'Kafka', 'AI/ML', 'Security'],
-    featured: true,
-    createdAt: '2024-08-01T00:00:00.000Z',
-    updatedAt: '2024-08-01T00:00:00.000Z'
-  },
-  {
     _id: '16',
     title: 'PredictiveHealth - Medical Diagnosis AI',
     slug: 'predictive-health-diagnosis',
@@ -387,25 +315,7 @@ export const staticProjects = [
     createdAt: '2024-08-15T00:00:00.000Z',
     updatedAt: '2024-08-15T00:00:00.000Z'
   },
-  {
-    _id: '17',
-    title: 'SmartTrading - Algorithmic Trading Bot',
-    slug: 'smart-trading-bot',
-    description: 'AI-powered algorithmic trading system with reinforcement learning and real-time market analysis.',
-    longDescription: 'Sophisticated algorithmic trading platform using reinforcement learning, sentiment analysis, and technical indicators to execute high-frequency trades across multiple cryptocurrency and stock exchanges.',
-    responsibilities: ['Reinforcement learning models', 'Real-time market data processing', 'Risk management algorithms', 'Multi-exchange connectivity'],
-    category: 'ai',
-    type: 'private' as const,
-    tech: ['Python', 'TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'WebSocket', 'Redis', 'PostgreSQL', 'Docker'],
-    featured: true,
-    client: {
-      name: 'QuantTrade LLC',
-      industry: 'FinTech',
-      size: 'Mid-size'
-    },
-    createdAt: '2024-09-01T00:00:00.000Z',
-    updatedAt: '2024-09-01T00:00:00.000Z'
-  },
+  
   {
     _id: '18',
     title: 'FraudGuard - Financial Fraud Detection',
@@ -427,26 +337,7 @@ export const staticProjects = [
   },
 
   // MOBILE PROJECTS
-  {
-    _id: '19',
-    title: 'FinanceWallet - Digital Banking App',
-    slug: 'finance-wallet-app',
-    description: 'Comprehensive mobile banking app with biometric security, cryptocurrency support, and investment tracking.',
-    longDescription: 'Full-featured digital banking application offering secure transactions, cryptocurrency wallet integration, investment portfolio tracking, expense categorization, and advanced biometric authentication.',
-    responsibilities: ['Cross-platform mobile development', 'Biometric authentication', 'Cryptocurrency integration', 'Real-time transaction processing'],
-    url: 'https://financewallet-app.com',
-    category: 'mobile',
-    type: 'public' as const,
-    tech: ['React Native', 'TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'Blockchain', 'Biometric API', 'Push Notifications'],
-    featured: true,
-    client: {
-      name: 'FinanceWallet Inc.',
-      industry: 'FinTech',
-      size: 'Startup'
-    },
-    createdAt: '2024-10-01T00:00:00.000Z',
-    updatedAt: '2024-10-01T00:00:00.000Z'
-  },
+  
   {
     _id: '20',
     title: 'HealthTracker - Personal Health Monitor',
@@ -454,10 +345,10 @@ export const staticProjects = [
     description: 'Comprehensive health monitoring app with wearable integration, AI health insights, and telemedicine features.',
     longDescription: 'Advanced health monitoring application integrating with various wearable devices, providing AI-powered health insights, medication reminders, symptom tracking, and direct telemedicine consultations.',
     responsibilities: ['Wearable device integration', 'Health data analytics', 'AI health insights', 'Telemedicine video calls'],
-    url: 'https://healthtracker-app.com',
+  url: 'https://health-tracker-bp-monitor.en.softonic.com/android',
     category: 'mobile',
     type: 'public' as const,
-    tech: ['Flutter', 'Dart', 'Firebase', 'Node.js', 'TensorFlow Lite', 'WebRTC', 'HealthKit', 'Google Fit'],
+    tech: ['React Native', 'TypeScript', 'Firebase', 'Node.js', 'TensorFlow Lite', 'WebRTC', 'HealthKit', 'Google Fit'],
     featured: true,
     client: {
       name: 'HealthTech Solutions',
@@ -507,7 +398,98 @@ export const staticProjects = [
     createdAt: '2024-11-15T00:00:00.000Z',
     updatedAt: '2024-11-15T00:00:00.000Z'
   }
+  ,
+  // Additional live projects added by request
+  {
+    _id: '23',
+    title: 'LearnPlayBond',
+    slug: 'learnplaybond',
+    description: 'Educational platform with interactive learning, gamification, and teacher tools.',
+    longDescription: 'LearnPlayBond is a modern educational platform combining interactive lessons, quizzes, progress tracking, and collaborative tools for students and teachers.',
+    responsibilities: ['Full-stack development', 'Real-time features', 'Deployment'],
+    url: 'https://learnplaybond.com',
+    category: 'web',
+    type: 'public' as const,
+    tech: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'Tailwind CSS'],
+    featured: true,
+    client: {
+      name: 'LearnPlayBond',
+      industry: 'EdTech',
+      size: 'Startup'
+    },
+    createdAt: '2025-08-27T00:00:00.000Z',
+    updatedAt: '2025-08-27T00:00:00.000Z'
+  },
+  {
+    _id: '24',
+    title: 'Gaming Animated Website',
+    slug: 'gaming-animated-website',
+    description: 'Animated showcase site for games and studios with rich transitions and interactive elements.',
+    longDescription: 'A visually rich animated website built to showcase game studios and projects. Smooth transitions, responsive design, and engaging UI/UX are the focus.',
+    responsibilities: ['Frontend development', 'Animation', 'Responsive design', 'Deployment'],
+    url: 'https://gaming-animated-website.vercel.app',
+    category: 'web',
+    type: 'public' as const,
+    tech: ['React', 'Framer Motion', 'Vercel', 'Tailwind CSS'],
+    featured: true,
+    client: {
+      name: 'Studio Demo',
+      industry: 'Gaming',
+      size: 'Small'
+    },
+    createdAt: '2025-08-27T00:00:00.000Z',
+    updatedAt: '2025-08-27T00:00:00.000Z'
+  },
+  {
+    _id: '25',
+    title: 'TrySwitch',
+    slug: 'tryswitch',
+    description: 'Secure platform for account switching and management built with MERN and JWT authentication.',
+    longDescription: 'TrySwitch is a secure account switching and management platform using a MERN stack with JWT-based authentication, role-based access, and session management.',
+    responsibilities: ['Full-stack MERN implementation', 'JWT authentication', 'Role-based access control'],
+    url: 'https://tryswitch.com',
+    category: 'web',
+    type: 'public' as const,
+    tech: ['MongoDB', 'Express', 'React', 'Node.js', 'JWT'],
+    featured: true,
+    client: {
+      name: 'TrySwitch',
+      industry: 'SaaS',
+      size: 'Startup'
+    },
+    createdAt: '2025-08-27T00:00:00.000Z',
+    updatedAt: '2025-08-27T00:00:00.000Z'
+  },
+  {
+    _id: '26',
+    title: 'UmrahMiles',
+    slug: 'umrahmiles',
+    description: 'React-based static site for Umrah travelers with booking and itinerary management.',
+    longDescription: 'UmrahMiles is a React static site offering booking, itinerary management, and traveler guidance tailored for Umrah pilgrims, focusing on reliability and ease of use.',
+    responsibilities: ['Frontend development', 'UX design', 'Deployment'],
+    url: 'https://umrahmiles.com',
+    category: 'web',
+    type: 'public' as const,
+    tech: ['React', 'Tailwind CSS', 'Vercel'],
+    featured: true,
+    client: {
+      name: 'UmrahMiles',
+      industry: 'Travel',
+      size: 'Small'
+    },
+    createdAt: '2025-08-27T00:00:00.000Z',
+    updatedAt: '2025-08-27T00:00:00.000Z'
+  }
 ];
+
+// Deduplicate by slug (first occurrence wins)
+const dedupeMap = new Map<string, unknown>();
+rawStaticProjects.forEach((p) => {
+  const key = p.slug || p._id || JSON.stringify(p);
+  if (!dedupeMap.has(key)) dedupeMap.set(key, p);
+});
+
+export const staticProjects = Array.from(dedupeMap.values());
 
 export const staticProjectsResponse = {
   projects: staticProjects,

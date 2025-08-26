@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 </svg>
               </motion.a>
               <motion.a
-                href="https://www.linkedin.com/in/bilal-abbasid2000"
+                href="https://www.linkedin.com/company/code-world"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
