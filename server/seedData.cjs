@@ -548,178 +548,61 @@ const seedProjects = [
     }
   },
 
-  // AI/ML PROJECTS (10)
+  // AI/ML PROJECTS — Consolidated to requested portfolio highlights
   {
-    title: 'Real-Time Anomaly Detection',
-    slug: 'real-time-anomaly-detection',
-    description: 'Detects zero-day threats using logs from Zeek, Kafka, and self-supervised AI models.',
-    longDescription: 'An advanced cybersecurity system that uses machine learning to detect zero-day threats in real-time by analyzing network logs and traffic patterns.',
-    responsibilities: ['Python-based detection engine', 'Real-time pipeline + alerting'],
+    title: 'SheetsAssist - Custom Excel/Sheets Automation with AI Assistants',
+    slug: 'sheetsassist-automation',
+    description: 'Custom automation for Excel/Google Sheets empowered by AI assistants to automate formulas, data transformation, and workflow tasks.',
+    longDescription: 'SheetsAssist provides intelligent automation for spreadsheets by combining programmatic macros, formula generation, and LLM-based AI assistants. Users describe transformations in plain English and the assistant generates optimized formulas, Apps Script/Office Scripts, pivot-ready summaries, and repeatable workflows. Integrations include CSV imports, API connectors, and scheduled syncs.',
+    responsibilities: ['Design AI-assisted spreadsheet workflows', 'Generate formulas & scripts via LLMs', 'Implement Apps Script/Office Scripts', 'Build connectors and scheduled syncs'],
     url: null,
     category: 'ai',
     type: 'private',
-    tech: ['Python', 'Kafka', 'AI/ML', 'Security'],
-    featured: true
-  },
-  {
-    title: 'AI Lead Scoring System',
-    slug: 'ai-lead-scoring-system',
-    description: 'Machine learning system to rank inbound leads based on behavioral data.',
-    longDescription: 'An intelligent lead scoring system that uses machine learning algorithms to analyze behavioral data and rank inbound leads by conversion probability.',
-    responsibilities: ['ML model design (scikit-learn)', 'FastAPI + Mongo backend'],
-    url: null,
-    category: 'ai',
-    type: 'private',
-    tech: ['Python', 'scikit-learn', 'FastAPI', 'MongoDB']
-  },
-  {
-    title: 'Document Intelligence with Smart OCR',
-    slug: 'document-intelligence-smart-ocr',
-    description: 'Extracts and summarizes legal/financial docs using OCR + GPT-powered LLMs.',
-    longDescription: 'A sophisticated document processing system that combines OCR technology with GPT-powered language models to extract and summarize information from legal and financial documents.',
-    responsibilities: ['Python OCR + GPT API', 'Smart summarization & tagging'],
-    url: null,
-    category: 'ai',
-    type: 'private',
-    tech: ['Python', 'OCR', 'GPT', 'NLP']
-  },
-  {
-    title: 'ChatGPT-Powered Support Bot',
-    slug: 'chatgpt-powered-support-bot',
-    description: 'LLM-based chatbot trained on business knowledgebase for real-time support.',
-    longDescription: 'An intelligent customer support chatbot powered by large language models, trained on business-specific knowledge bases to provide accurate real-time support.',
-    responsibilities: ['Custom LLM workflows', 'Integration with CRM + frontends'],
-    url: null,
-    category: 'ai',
-    type: 'private',
-    tech: ['LLM', 'ChatGPT', 'NLP', 'Integration']
-  },
-  {
-    title: 'Voice-Controlled NLP System',
-    slug: 'voice-controlled-nlp-system',
-    description: 'Converts spoken commands into real-time industrial control instructions.',
-    longDescription: 'An innovative voice-controlled system that uses natural language processing to convert spoken commands into real-time industrial control instructions.',
-    responsibilities: ['Audio preprocessing + NLP pipeline', 'Voice-to-action integrations'],
-    url: null,
-    category: 'ai',
-    type: 'private',
-    tech: ['NLP', 'Audio Processing', 'Voice Recognition']
-  },
-  {
-    title: 'AI Image Tagging for Ecommerce',
-    slug: 'ai-image-tagging-ecommerce',
-    description: 'Auto-tags product images using YOLOv8 + CLIP models.',
-    longDescription: 'An automated image tagging system for e-commerce platforms that uses advanced computer vision models to automatically categorize and tag product images.',
-    responsibilities: ['Image processing pipeline', 'Smart category suggestion'],
-    url: null,
-    category: 'ai',
-    type: 'private',
-    tech: ['Computer Vision', 'YOLOv8', 'CLIP', 'Ecommerce']
-  },
-  {
-    title: 'PredictiveHealth - Medical Diagnosis AI',
-    slug: 'predictive-health-diagnosis',
-    description: 'AI-powered medical diagnosis system using computer vision and deep learning for medical imaging analysis.',
-    longDescription: 'Advanced medical AI system that analyzes medical images including X-rays, MRIs, and CT scans using deep learning to assist healthcare professionals in early disease detection and diagnosis.',
-    responsibilities: ['Medical imaging AI models', 'HIPAA-compliant infrastructure', 'Clinical validation pipeline', 'Real-time inference optimization'],
-    url: null,
-    category: 'ai',
-    type: 'private',
-    tech: ['TensorFlow', 'PyTorch', 'OpenCV', 'DICOM', 'Python', 'FastAPI', 'PostgreSQL', 'Docker', 'HIPAA'],
+    tech: ['TypeScript', 'Google Apps Script', 'Office Scripts', 'Node.js', 'OpenAI / LLMs', 'APIs', 'OAuth2'],
     featured: true,
     client: {
-      name: 'MedTech Innovations',
-      industry: 'Healthcare',
-      size: 'Enterprise'
+      name: 'Productivity Labs',
+      industry: 'SaaS',
+      size: 'SMB'
     }
   },
   {
-    title: 'SmartTrading - Algorithmic Trading Bot',
-    slug: 'smart-trading-bot',
-    description: 'AI-powered algorithmic trading system with reinforcement learning and real-time market analysis.',
-    longDescription: 'Sophisticated algorithmic trading platform using reinforcement learning, sentiment analysis, and technical indicators to execute high-frequency trades across multiple cryptocurrency and stock exchanges.',
-    responsibilities: ['Reinforcement learning models', 'Real-time market data processing', 'Risk management algorithms', 'Multi-exchange connectivity'],
+    title: 'DocSearch RAG - RAG-Powered Document Summarization & Search System',
+    slug: 'docsearch-rag-system',
+    description: 'Retrieval-Augmented Generation system for summarizing, indexing, and searching large document collections with semantic search and concise answers.',
+    longDescription: 'DocSearch RAG provides a full pipeline for ingesting documents (PDFs, Word, HTML), extracting embeddings, and serving semantic search and conversational summarization using RAG. It supports chunking strategies, vector stores (Pinecone/Weaviate/FAISS), prompt engineering, and a SaaS-ready search UI for knowledge workers.',
+    responsibilities: ['Document ingestion & preprocessing', 'Embedding pipelines and vector store integration', 'RAG prompt design and evaluation', 'Search UI and conversational summarization'],
     url: null,
     category: 'ai',
     type: 'private',
-    tech: ['Python', 'TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'WebSocket', 'Redis', 'PostgreSQL', 'Docker'],
+    tech: ['Python', 'LangChain', 'OpenAI / LLMs', 'Pinecone', 'FAISS', 'FastAPI', 'React', 'Docker'],
     featured: true,
     client: {
-      name: 'QuantTrade LLC',
-      industry: 'FinTech',
+      name: 'KnowledgeCore',
+      industry: 'Enterprise Search',
       size: 'Mid-size'
     }
   },
   {
-    title: 'ContentGenAI - Automated Content Creation',
-    slug: 'content-gen-ai',
-    description: 'GPT-powered content generation platform for blogs, social media, and marketing materials.',
-    longDescription: 'AI content creation platform leveraging large language models to generate high-quality blog posts, social media content, marketing copy, and technical documentation with brand voice consistency.',
-    responsibilities: ['LLM fine-tuning', 'Content quality scoring', 'Brand voice modeling', 'Multi-format generation'],
+    title: 'AutoResponder AI - AI-Powered Email & Slack/Teams Auto-Responder',
+    slug: 'autoresponder-ai',
+    description: 'Automated contextual responders for email and collaboration platforms (Slack/Teams) using AI to classify intent and draft replies.',
+    longDescription: 'AutoResponder AI connects to email providers and collaboration platforms to triage messages, detect intent, and draft contextual replies or suggested actions. Features include templating, SLA-aware prioritization, conversation memory, and secure connector patterns for scheduling or sending responses via SMTP, Microsoft Graph, or Slack APIs.',
+    responsibilities: ['Connector development for Email/Slack/Teams', 'Intent classification & routing', 'LLM-based reply generation with safety checks', 'SLA and escalation workflows'],
     url: null,
     category: 'ai',
     type: 'private',
-    tech: ['GPT-4', 'OpenAI API', 'Python', 'FastAPI', 'MongoDB', 'Redis', 'Docker', 'React', 'TypeScript'],
+    tech: ['Node.js', 'TypeScript', 'OpenAI / LLMs', 'Microsoft Graph API', 'Slack API', 'Redis', 'PostgreSQL', 'Docker'],
     featured: true,
     client: {
-      name: 'ContentAI Solutions',
-      industry: 'Marketing',
-      size: 'Startup'
-    }
-  },
-  {
-    title: 'FraudGuard - Financial Fraud Detection',
-    slug: 'fraud-guard-detection',
-    description: 'Real-time fraud detection system using ensemble machine learning and behavioral analysis.',
-    longDescription: 'Advanced fraud detection platform combining ensemble machine learning models, behavioral biometrics, device fingerprinting, and graph analytics to detect fraudulent transactions in real-time.',
-    responsibilities: ['Ensemble ML models', 'Behavioral analytics', 'Graph-based fraud detection', 'Real-time scoring engine'],
-    url: null,
-    category: 'ai',
-    type: 'private',
-    tech: ['Python', 'scikit-learn', 'XGBoost', 'Neo4j', 'Apache Kafka', 'Redis', 'PostgreSQL', 'Docker', 'Kubernetes'],
-    featured: true,
-    client: {
-      name: 'SecureFinance Corp',
-      industry: 'Financial Services',
-      size: 'Enterprise'
-    }
-  },
-  {
-    title: 'VisionSort - Industrial Quality Control',
-    slug: 'vision-sort-quality',
-    description: 'Computer vision system for automated quality control and defect detection in manufacturing.',
-    longDescription: 'AI-powered quality control system using advanced computer vision to detect defects, sort products, and ensure quality standards in high-speed manufacturing environments.',
-    responsibilities: ['Computer vision models', 'Real-time inference optimization', 'Industrial camera integration', 'Quality metrics dashboard'],
-    url: null,
-    category: 'ai',
-    type: 'private',
-    tech: ['OpenCV', 'TensorFlow', 'YOLO', 'Python', 'FastAPI', 'InfluxDB', 'Redis', 'Docker', 'Edge Computing'],
-    featured: true,
-    client: {
-      name: 'ManufacturingTech Inc.',
-      industry: 'Manufacturing',
-      size: 'Enterprise'
+      name: 'CommsAI',
+      industry: 'Automation',
+      size: 'SMB'
     }
   },
 
   // MOBILE DEVELOPMENT PROJECTS (10)
-  {
-    title: 'FinanceWallet - Digital Banking App',
-    slug: 'finance-wallet-app',
-    description: 'Comprehensive mobile banking app with biometric security, cryptocurrency support, and investment tracking.',
-    longDescription: 'Full-featured digital banking application offering secure transactions, cryptocurrency wallet integration, investment portfolio tracking, expense categorization, and advanced biometric authentication.',
-    responsibilities: ['Cross-platform mobile development', 'Biometric authentication', 'Cryptocurrency integration', 'Real-time transaction processing'],
-    url: null,
-    category: 'mobile',
-    type: 'public',
-    tech: ['React Native', 'TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'Blockchain', 'Biometric API', 'Push Notifications'],
-    featured: true,
-    client: {
-      name: 'FinanceWallet Inc.',
-      industry: 'FinTech',
-      size: 'Startup'
-    }
-  },
+  // FinanceWallet removed per update
   {
     title: 'HealthTracker - Personal Health Monitor',
     slug: 'health-tracker-app',
@@ -857,6 +740,23 @@ const seedProjects = [
     }
   },
   {
+    title: 'Evoke News - Mobile App & Website',
+    slug: 'evoke-news-app',
+    description: 'Breaking news mobile app (Android) and companion website — Vue 3 frontend, FastAPI backend, crawler server, and Flutter mobile app.',
+    longDescription: 'Evoke News is a cross-platform news product with a Flutter Android/iOS app and a Vue 3 website. The web frontend uses Vue 3, the mobile app is built with Flutter, and the backend uses FastAPI for content APIs. The system also includes a crawler server for ingesting news sources, YouTube API video integration, and an admin dashboard for editorial workflows. Backend services are deployed on DigitalOcean droplets for API, crawler, and DB services.',
+    responsibilities: ['Built Vue 3 website and Flutter mobile app', 'Implemented FastAPI backend and YouTube integration', 'Developed crawler server for ingest', 'Admin dashboard & editorial workflows', 'DigitalOcean deployments'],
+    url: 'https://play.google.com/store/apps/details?id=com.evokeplanet.breakingnews',
+    category: 'mobile',
+    type: 'public',
+    tech: ['Flutter', 'Vue.js 3', 'FastAPI', 'Python', 'YouTube API', 'Crawler', 'DigitalOcean', 'PostgreSQL', 'Docker'],
+    featured: true,
+    client: {
+      name: 'Evoke Planet',
+      industry: 'Media & News',
+      size: 'Small'
+    }
+  },
+  {
     title: 'FoodieAI - Smart Recipe Assistant',
     slug: 'foodie-ai-app',
     description: 'AI-powered cooking app with ingredient recognition, recipe generation, and dietary optimization.',
@@ -909,6 +809,7 @@ const seedProjects = [
       size: 'Enterprise'
     }
   },
+  
   {
     title: 'SecureCI - DevSecOps Pipeline',
     slug: 'secure-ci-pipeline',

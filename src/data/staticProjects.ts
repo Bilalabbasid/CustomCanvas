@@ -203,23 +203,23 @@ const rawStaticProjects = [
     updatedAt: '2024-04-15T00:00:00.000Z'
   },
   {
-    _id: '9',
-    title: 'FinanceCore - Banking API Gateway',
-    slug: 'financecore-gateway',
-    description: 'PCI-DSS compliant banking API gateway with fraud detection, transaction processing, and regulatory compliance.',
-    longDescription: 'Secure banking API gateway handling millions of transactions daily with real-time fraud detection, PCI-DSS compliance, regulatory reporting, multi-currency support, and high-frequency trading capabilities.',
-    responsibilities: ['API gateway architecture', 'Fraud detection algorithms', 'PCI-DSS compliance', 'High-frequency transaction processing'],
+    _id: '10',
+    title: 'GameHub - Real-time Gaming Backend',
+    slug: 'gamehub-backend',
+    description: 'High-performance gaming backend with matchmaking, leaderboards, real-time multiplayer, and anti-cheat systems.',
+    longDescription: 'Scalable gaming backend infrastructure supporting millions of concurrent players with intelligent matchmaking algorithms, real-time multiplayer synchronization, global leaderboards, and advanced anti-cheat detection systems.',
+    responsibilities: ['Real-time multiplayer architecture', 'Matchmaking algorithms', 'Anti-cheat system development', 'Global leaderboard optimization'],
     category: 'backend',
     type: 'private' as const,
-    tech: ['Java', 'Spring Boot', 'Redis', 'PostgreSQL', 'Apache Kafka', 'Docker', 'Kubernetes', 'OAuth2', 'JWT', 'Elasticsearch'],
+    tech: ['C++', 'Node.js', 'WebSocket', 'Redis', 'MongoDB', 'Docker', 'Kubernetes', 'UDP', 'TCP', 'Load Balancing'],
     featured: true,
     client: {
-      name: 'SecureBank Corp',
-      industry: 'Banking',
-      size: 'Enterprise'
+      name: 'GameStudio Interactive',
+      industry: 'Gaming',
+      size: 'Mid-size'
     },
-    createdAt: '2024-05-01T00:00:00.000Z',
-    updatedAt: '2024-05-01T00:00:00.000Z'
+    createdAt: '2024-05-15T00:00:00.000Z',
+    updatedAt: '2024-05-15T00:00:00.000Z'
   },
   {
     _id: '10',
@@ -297,47 +297,67 @@ const rawStaticProjects = [
 
   // AI/ML PROJECTS
   {
-    _id: '16',
-    title: 'PredictiveHealth - Medical Diagnosis AI',
-    slug: 'predictive-health-diagnosis',
-    description: 'AI-powered medical diagnosis system using computer vision and deep learning for medical imaging analysis.',
-    longDescription: 'Advanced medical AI system that analyzes medical images including X-rays, MRIs, and CT scans using deep learning to assist healthcare professionals in early disease detection and diagnosis.',
-    responsibilities: ['Medical imaging AI models', 'HIPAA-compliant infrastructure', 'Clinical validation pipeline', 'Real-time inference optimization'],
+    _id: '27',
+    title: 'SheetsAssist - Custom Excel/Sheets Automation with AI Assistants',
+    slug: 'sheetsassist-automation',
+    description: 'Custom automation for Excel/Google Sheets empowered by AI assistants to automate formulas, data transformation, and workflow tasks.',
+    longDescription: 'SheetsAssist provides intelligent automation for spreadsheets by combining programmatic macros, formula generation, and GPT-style AI assistants. Users can describe data transformations in plain English and the assistant generates optimized formulas, scripts (Apps Script / Office Scripts), pivot-ready summaries, and repeatable automation workflows. Integrations include CSV imports, APIs, and scheduled syncs.',
+    responsibilities: ['Design AI-assisted spreadsheet workflows', 'Generate formulas & scripts via LLMs', 'Implement Apps Script/Office Scripts', 'Build scheduled syncs and connectors'],
     category: 'ai',
     type: 'private' as const,
-    tech: ['TensorFlow', 'PyTorch', 'OpenCV', 'DICOM', 'Python', 'FastAPI', 'PostgreSQL', 'Docker', 'HIPAA'],
+    tech: ['TypeScript', 'Google Apps Script', 'Office Scripts', 'Node.js', 'OpenAI / LLMs', 'Puppeteer', 'APIs', 'OAuth2'],
     featured: true,
     client: {
-      name: 'MedTech Innovations',
-      industry: 'Healthcare',
-      size: 'Enterprise'
+      name: 'Productivity Labs',
+      industry: 'SaaS',
+      size: 'SMB'
     },
-    createdAt: '2024-08-15T00:00:00.000Z',
-    updatedAt: '2024-08-15T00:00:00.000Z'
+    createdAt: '2025-08-01T00:00:00.000Z',
+    updatedAt: '2025-08-01T00:00:00.000Z'
   },
-  
+
   {
-    _id: '18',
-    title: 'FraudGuard - Financial Fraud Detection',
-    slug: 'fraud-guard-detection',
-    description: 'Real-time fraud detection system using ensemble machine learning and behavioral analysis.',
-    longDescription: 'Advanced fraud detection platform combining ensemble machine learning models, behavioral biometrics, device fingerprinting, and graph analytics to detect fraudulent transactions in real-time.',
-    responsibilities: ['Ensemble ML models', 'Behavioral analytics', 'Graph-based fraud detection', 'Real-time scoring engine'],
+    _id: '28',
+    title: 'DocSearch RAG - RAG-Powered Document Summarization & Search System',
+    slug: 'docsearch-rag-system',
+    description: 'Retrieval-Augmented Generation system for summarizing, indexing, and searching large document collections with semantic search and concise answers.',
+    longDescription: 'DocSearch RAG provides a complete pipeline for ingesting documents (PDFs, Word, HTML), extracting embeddings, and serving semantic search and conversational summarization using RAG. The system supports chunking strategies, vector stores (Pinecone/Weaviate/FAISS), prompt engineering, and a SaaS-ready search UI for knowledge workers.',
+    responsibilities: ['Document ingestion & preprocessing', 'Embedding pipelines and vector store integration', 'RAG prompt design and evaluation', 'Search UI and conversational summarization'],
     category: 'ai',
     type: 'private' as const,
-    tech: ['Python', 'scikit-learn', 'XGBoost', 'Neo4j', 'Apache Kafka', 'Redis', 'PostgreSQL', 'Docker', 'Kubernetes'],
+    tech: ['Python', 'LangChain', 'OpenAI / LLMs', 'Pinecone', 'FAISS', 'FastAPI', 'React', 'Docker'],
     featured: true,
     client: {
-      name: 'SecureFinance Corp',
-      industry: 'Financial Services',
-      size: 'Enterprise'
+      name: 'KnowledgeCore',
+      industry: 'Enterprise Search',
+      size: 'Mid-size'
     },
-    createdAt: '2024-09-15T00:00:00.000Z',
-    updatedAt: '2024-09-15T00:00:00.000Z'
+    createdAt: '2025-07-15T00:00:00.000Z',
+    updatedAt: '2025-07-15T00:00:00.000Z'
+  },
+
+  {
+    _id: '29',
+    title: 'AutoResponder AI - AI-Powered Email & Slack/Teams Auto-Responder',
+    slug: 'autoresponder-ai',
+    description: 'Automated contextual responders for email and collaboration platforms (Slack/Teams) using AI to classify intent and draft replies.',
+    longDescription: 'AutoResponder AI integrates with email providers and collaboration platforms to automatically triage messages, detect intent, and draft contextual replies or suggested actions. Features include templating, SLA-aware prioritization, conversation memory, and secure connector patterns for sending or scheduling responses via SMTP, Microsoft Graph, or Slack APIs.',
+    responsibilities: ['Connector development for Email/Slack/Teams', 'Intent classification & routing', 'LLM-based reply generation with safety checks', 'SLA and escalation workflows'],
+    category: 'ai',
+    type: 'private' as const,
+    tech: ['Node.js', 'TypeScript', 'OpenAI / LLMs', 'Microsoft Graph API', 'Slack API', 'Redis', 'PostgreSQL', 'Docker'],
+    featured: true,
+    client: {
+      name: 'CommsAI',
+      industry: 'Automation',
+      size: 'SMB'
+    },
+    createdAt: '2025-06-30T00:00:00.000Z',
+    updatedAt: '2025-06-30T00:00:00.000Z'
   },
 
   // MOBILE PROJECTS
-  
+
   {
     _id: '20',
     title: 'HealthTracker - Personal Health Monitor',
@@ -345,7 +365,7 @@ const rawStaticProjects = [
     description: 'Comprehensive health monitoring app with wearable integration, AI health insights, and telemedicine features.',
     longDescription: 'Advanced health monitoring application integrating with various wearable devices, providing AI-powered health insights, medication reminders, symptom tracking, and direct telemedicine consultations.',
     responsibilities: ['Wearable device integration', 'Health data analytics', 'AI health insights', 'Telemedicine video calls'],
-  url: 'https://health-tracker-bp-monitor.en.softonic.com/android',
+    url: 'https://health-tracker-bp-monitor.en.softonic.com/android',
     category: 'mobile',
     type: 'public' as const,
     tech: ['React Native', 'TypeScript', 'Firebase', 'Node.js', 'TensorFlow Lite', 'WebRTC', 'HealthKit', 'Google Fit'],
@@ -379,26 +399,7 @@ const rawStaticProjects = [
     createdAt: '2024-11-01T00:00:00.000Z',
     updatedAt: '2024-11-01T00:00:00.000Z'
   },
-  {
-    _id: '22',
-    title: 'PipelineAI - ML Operations Platform',
-    slug: 'pipeline-ai-mlops',
-    description: 'End-to-end MLOps platform with model versioning, automated deployment, and performance monitoring.',
-    longDescription: 'Comprehensive MLOps platform providing model lifecycle management, automated CI/CD for ML models, A/B testing for model performance, drift detection, and scalable model serving infrastructure.',
-    responsibilities: ['MLOps pipeline design', 'Model versioning system', 'Automated testing framework', 'Performance monitoring'],
-    category: 'devops',
-    type: 'private' as const,
-    tech: ['Kubeflow', 'MLflow', 'Docker', 'Kubernetes', 'TensorFlow Serving', 'Prometheus', 'Grafana', 'Python', 'Go'],
-    featured: true,
-    client: {
-      name: 'MLOps Technologies',
-      industry: 'Machine Learning',
-      size: 'Enterprise'
-    },
-    createdAt: '2024-11-15T00:00:00.000Z',
-    updatedAt: '2024-11-15T00:00:00.000Z'
-  }
-  ,
+  
   // Additional live projects added by request
   {
     _id: '23',
@@ -480,13 +481,41 @@ const rawStaticProjects = [
     createdAt: '2025-08-27T00:00:00.000Z',
     updatedAt: '2025-08-27T00:00:00.000Z'
   }
+  ,
+  {
+    _id: '30',
+    title: 'Evoke News - Mobile App & Website',
+    slug: 'evoke-news-app',
+  description: 'Breaking news Android/iOS app and companion website — Vue 3 frontend with FastAPI backend, crawler server, and Flutter mobile app. Backend deployed on DigitalOcean.',
+  longDescription: 'Evoke News combines a Vue 3 website and Flutter mobile app with a FastAPI backend. It includes a crawler server for ingest, YouTube API integration for video, dedicated API and crawler services, a database, and an editorial admin dashboard. Backend services are deployed on DigitalOcean droplets.',
+    responsibilities: ['Built Vue 2 web and mobile frontends', 'FastAPI backend and YouTube integration', 'Crawler server and media pipeline', 'Editorial admin dashboard', 'DigitalOcean deployments'],
+    url: 'https://play.google.com/store/apps/details?id=com.evokeplanet.breakingnews',
+    category: 'mobile',
+    type: 'public' as const,
+  tech: ['Flutter', 'Vue.js 3', 'FastAPI', 'Python', 'YouTube API', 'Crawler', 'DigitalOcean', 'PostgreSQL', 'Docker'],
+    featured: true,
+    client: {
+      name: 'Evoke Planet',
+      industry: 'Media & News',
+      size: 'Small'
+    },
+    createdAt: '2025-08-27T00:00:00.000Z',
+    updatedAt: '2025-08-27T00:00:00.000Z'
+  }
 ];
 
 // Deduplicate by slug (first occurrence wins)
-const dedupeMap = new Map<string, unknown>();
+type ProjectEntry = {
+  _id?: string;
+  slug?: string;
+  [k: string]: unknown;
+};
+const dedupeMap = new Map<string, ProjectEntry>();
 rawStaticProjects.forEach((p) => {
-  const key = p.slug || p._id || JSON.stringify(p);
-  if (!dedupeMap.has(key)) dedupeMap.set(key, p);
+  const proj = p as ProjectEntry | undefined;
+  if (!proj) return;
+  const key = proj.slug || proj._id || JSON.stringify(proj);
+  if (!dedupeMap.has(key)) dedupeMap.set(key, proj);
 });
 
 export const staticProjects = Array.from(dedupeMap.values());
