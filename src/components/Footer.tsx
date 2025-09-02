@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <motion.a
-                href="mailto:abbasi.bilal2000@gmail.com"
+                href="mailto:Info@codeworld.dev"
                 whileHover={{ scale: 1.1 }}
                 className="text-gray-400 hover:text-indigo-400 transition-colors duration-200"
               >

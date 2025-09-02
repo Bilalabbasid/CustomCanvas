@@ -87,7 +87,7 @@ export const emailService = {
         
         // Recipient details (your information)
         to_name: 'Code World Team',
-        to_email: 'abbasi.bilal2000@gmail.com',
+  to_email: 'Info@codeworld.dev',
         
         // Additional metadata
         timestamp: new Date().toLocaleString(),
@@ -116,7 +116,7 @@ export const emailService = {
               to_email: formData.email,           // Send TO the user
               user_name: formData.name,           // User's name for greeting
               from_name: 'Code World Team',          // Your name
-              from_email: 'abbasi.bilal2000@gmail.com', // Your email
+              from_email: 'Info@codeworld.dev', // Your email
               reply_message: `Thank you for contacting me, ${formData.name}! I have received your message and will get back to you within 24 hours.`,
               
               // Additional auto-reply variables

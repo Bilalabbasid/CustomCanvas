@@ -16,12 +16,12 @@ In the template editor:
 
 **To Email Field:**
 - Make sure there's a "To" field in your template
-- Set it to: `abbasi.bilal2000@gmail.com`
+- Set it to: `Info@codeworld.dev`
 - OR use the dynamic variable: `{{to_email}}`
 
 **Template Content Example:**
 ```
-To: abbasi.bilal2000@gmail.com
+To: Info@codeworld.dev
 From: {{from_name}} <{{from_email}}>
 Reply-To: {{reply_to}}
 
@@ -58,7 +58,7 @@ If the above doesn't work, try using these standard EmailJS variables:
 
 ## Variables Available in Your Template
 The code now sends these variables:
-- `to_email`: abbasi.bilal2000@gmail.com
+- `to_email`: Info@codeworld.dev
 - `from_name`: User's name
 - `from_email`: User's email
 - `reply_to`: User's email
@@ -69,4 +69,4 @@ The code now sends these variables:
 - `project`: User's project
 - `budget`: User's budget
 - `timestamp`: When the form was submitted
-- `recipient_email`: abbasi.bilal2000@gmail.com (fallback)
+- `recipient_email`: Info@codeworld.dev (fallback)

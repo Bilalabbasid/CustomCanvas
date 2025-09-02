@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleEmailClick = () => {
-    navigator.clipboard.writeText('abbasi.bilal2000@gmail.com');
+  navigator.clipboard.writeText('Info@codeworld.dev');
   };
   const { toast, showSuccess, showError, hideToast } = useToast();
 
@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
                 <div>
                   <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</p>
                   <p className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors duration-200 underline decoration-2 decoration-indigo-300 hover:decoration-indigo-500">
-                    abbasi.bilal2000@gmail.com
+                    Info@codeworld.dev
                   </p>
                   <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     Click to copy email address
@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        navigator.clipboard.writeText('abbasi.bilal2000@gmail.com');
+                        navigator.clipboard.writeText('Info@codeworld.dev');
                       }}
                       className="text-xs bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 px-2 py-1 rounded hover:bg-indigo-200 dark:hover:bg-indigo-800 transition-colors"
                     >

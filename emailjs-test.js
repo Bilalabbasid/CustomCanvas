@@ -10,7 +10,7 @@ function testEmailJS() {
     project: "Test Project",
     budget: "$5k - $10k",
     to_name: "Bilal Abbasi",
-    to_email: "abbasi.bilal2000@gmail.com",
+  to_email: "Info@codeworld.dev",
     reply_to: "test@example.com",
     timestamp: new Date().toLocaleString()
   };
