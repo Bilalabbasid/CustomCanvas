@@ -502,6 +502,219 @@ const rawStaticProjects = [
     createdAt: '2025-08-27T00:00:00.000Z',
     updatedAt: '2025-08-27T00:00:00.000Z'
   }
+  ,
+  {
+    _id: '31',
+    title: 'Business Intelligence Platform',
+    slug: 'business-intelligence-platform',
+    description: 'Enterprise-grade Business Intelligence platform transforming data into strategic insights. 🚀',
+    longDescription: `This comprehensive Business Intelligence platform transforms how organizations leverage their data assets to drive strategic decisions, optimize operations, and accelerate growth. Built with enterprise-grade security and scalability, it delivers immediate value while providing a foundation for advanced analytics and AI-driven insights.
+
+Features
+📈 Analytics & Visualization
+Interactive Dashboards with role-based access (Super Admin, Branch Manager, Analyst, Staff)
+Advanced Charts using Recharts (Line, Bar, Pie, Area, Heatmap, Cohort analysis)
+Real-time KPI Metrics with live data updates
+Custom Chart Builder with drag-and-drop interface
+Export Capabilities (PDF, Excel, PNG, SVG)
+Mobile-responsive design with dark/light themes
+
+🔄 ETL & Data Pipeline
+Multi-source Data Ingestion: CSV uploads, REST APIs, Database connections
+Automated Data Validation with configurable rules and business logic
+Advanced Data Transformation (cleansing, normalization, enrichment)
+Data Warehouse Management (PostgreSQL/ClickHouse support)
+Scheduled ETL Jobs with Celery and Redis
+Real-time Data Processing with streaming capabilities
+
+🏗️ Architecture & Infrastructure
+Microservices Architecture with Docker support
+Scalable Task Queue with Celery and Redis
+Database Flexibility (MongoDB for raw data, PostgreSQL/ClickHouse for warehouse)
+API-first Design with comprehensive REST endpoints
+Enterprise Security with JWT authentication and RBAC
+Monitoring & Observability with Flower, Prometheus, and Sentry
+
+💼 Business Intelligence Features
+Sales Analytics: Revenue tracking, trend analysis, forecasting
+Inventory Management: Stock levels, turnover rates, demand planning
+Staff Performance: Individual metrics, team analytics, productivity tracking
+Customer Analysis: Segmentation, behavior analysis, loyalty programs
+Financial Reporting: P&L statements, cost analysis, margin tracking
+
+🛠️ Technology Stack
+Backend: Django 4.2, Django REST Framework, MongoDB, PostgreSQL/ClickHouse, Celery + Redis, JWT Auth
+Frontend: React 18, Vite, Tailwind CSS, Recharts, React Query, Headless UI
+DevOps & Monitoring: Docker, Flower, Prometheus, Sentry, GitHub Actions
+
+Repository: https://github.com/Bilalabbasid/Business-Intelligence-Tool`,
+    responsibilities: [
+      'Designed end-to-end BI architecture and API-first integrations',
+      'Implemented ETL pipelines with validation and scheduling',
+      'Built interactive dashboards and custom chart builder',
+      'Established observability and security (Prometheus, Sentry, JWT + RBAC)'
+    ],
+    url: 'https://github.com/Bilalabbasid/Business-Intelligence-Tool',
+    category: 'data',
+    type: 'public' as const,
+    tech: ['Django', 'Django REST Framework', 'MongoDB', 'PostgreSQL', 'ClickHouse', 'Celery', 'Redis', 'React', 'Vite', 'Tailwind CSS', 'Recharts', 'React Query', 'Docker', 'Prometheus', 'Sentry'],
+    featured: true,
+    client: {
+      name: 'Business Intelligence Initiative',
+      industry: 'Analytics & Data',
+      size: 'Enterprise'
+    },
+    createdAt: '2025-09-17T00:00:00.000Z',
+    updatedAt: '2025-09-17T00:00:00.000Z'
+  }
+  ,
+  {
+    _id: '32',
+    title: 'Custom CRM',
+    slug: 'custom-crm',
+    description: 'Full-featured Custom CRM with role-based dashboards, reservations, orders, and analytics.',
+    longDescription: `Custom CRM delivers a complete customer relationship management system focused on operations, analytics, and role-based access.
+
+Core Functionality
+- Authentication & Authorization: JWT-based auth with role-based access control (Admin, Manager, Staff)
+- Customer Management: Customer profiles, visit history, loyalty points, and feedback
+- Reservations: Table booking system with availability checking and conflict prevention
+- Order Management: POS integration with order tracking, payment processing, and status updates
+- Menu Management: Dynamic menu with categories, pricing, availability, and popularity tracking
+- Staff Management: Employee profiles, performance tracking, and role management
+- Analytics & Reports: Comprehensive reporting with charts and data visualization
+- Dashboard: Real-time KPIs and business metrics
+
+Advanced Dashboard Features ✨
+- Owner Dashboard: Executive-level business intelligence with multiple comprehensive sections
+- Manager Dashboard: Operational management with manager-focused performance sections
+- Role-based Dashboards: Different views and permissions based on user roles
+
+Implementation Status (selected completed items)
+- Owner Dashboard: Executive Summary, Business Performance, Branch & Manager Performance, Financial Analytics, Customer Analytics, Menu & Product Insights, Growth & Marketing Performance, Staff & HR Overview, Risk & Compliance Alerts, Forecasting & AI Insights
+- Manager Dashboard: Sales & Revenue Overview, Top Performers & Trends, Inventory & Stock Management, Customer Insights, Reservations & Orders, Menu Management, Staff & Operations, Analytics & Reports, Recent Activity Feed, Alerts & Notifications
+
+Repository: https://github.com/Bilalabbasid/CRM`,
+    responsibilities: [
+      'Designed role-based dashboard experiences for Owner/Manager/Staff',
+      'Implemented JWT auth and RBAC for secure access',
+      'Built reservations, order management and POS integrations',
+      'Created analytics and reporting dashboards with charting and KPIs'
+    ],
+    url: 'https://github.com/Bilalabbasid/CRM',
+    category: 'web',
+    type: 'public' as const,
+    tech: [
+      // Frontend
+      'React 18', 'React Router', 'Tailwind CSS', 'Recharts', 'Lucide React', 'date-fns',
+      // Backend
+      'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'bcryptjs', 'express-validator', 'Helmet', 'Morgan',
+      // DevOps
+      'Docker', 'Docker Compose', 'Nginx', 'MongoDB (replica set)'
+    ],
+    featured: true,
+    client: {
+      name: 'CRM Initiative',
+      industry: 'SaaS / Retail',
+      size: 'Mid-size'
+    },
+    createdAt: '2025-09-17T00:00:00.000Z',
+    updatedAt: '2025-09-17T00:00:00.000Z'
+  }
+  ,
+  {
+    _id: '33',
+    title: 'School Management System (Enterprise Edition)',
+    slug: 'school-management-system-enterprise',
+    description: 'Commercial-grade MERN-based School Management System with enterprise features and role-based dashboards.',
+    longDescription: `🚀 Commercial-Grade School Management Solution
+
+A comprehensive, enterprise-ready School Management System built with the MERN stack, designed for commercial deployment with advanced features, security, and scalability.
+
+✨ Key Features
+
+🎯 Enterprise Architecture
+Full MERN Stack: React.js (TypeScript) + Node.js/Express + MongoDB
+Professional UI: shadcn/ui components with advanced TailwindCSS
+Real-time Communication: Socket.IO integration
+Enterprise Security: JWT authentication, role-based access, rate limiting
+Production Ready: Comprehensive logging, monitoring, and error handling
+
+👥 User Management
+Multi-Role System: Admin, Teacher, Student, Parent, Accountant
+Advanced Authentication: JWT tokens, password reset, email verification
+Profile Management: Comprehensive user profiles with media upload
+Access Control: Role-based permissions and route protection
+
+🎓 Student Management
+Complete Lifecycle: Admission to graduation tracking
+Academic Records: Grades, attendance, performance analytics
+Parent Integration: Guardian information and communication
+Document Management: Certificates, reports, and file uploads
+Fee Management: Payment tracking and financial records
+
+👨‍🏫 Teacher Management
+Staff Profiles: Qualifications, experience, specializations
+Schedule Management: Timetables, class assignments
+Performance Tracking: Evaluations, feedback systems
+Leave Management: Request and approval workflows
+Salary Processing: Payroll integration capabilities
+
+🏛️ Academic Management
+Class Organization: Grades, sections, student capacity
+Subject Management: Curriculum, credits, prerequisites
+Timetable System: Automated scheduling and conflict resolution
+Exam Management: Test creation, grading, result processing
+Report Cards: Automated generation and distribution
+
+📊 Advanced Reporting
+Dashboard Analytics: Real-time statistics and KPIs
+Custom Reports: Student, teacher, financial, and performance reports
+Export Options: PDF, Excel, and CSV formats
+Data Visualization: Charts, graphs, and trend analysis
+Audit Trails: Complete activity logging and tracking
+
+🔒 Enterprise Security
+Authentication: Multi-factor authentication options
+Authorization: Granular role-based permissions
+Data Protection: Input sanitization and validation
+Rate Limiting: Advanced request throttling
+Security Headers: Helmet.js protection
+Audit Logging: Comprehensive security event tracking
+
+🏗️ Infrastructure Features
+Scalable Architecture: Microservice-ready design
+Database Optimization: Indexed queries and aggregation pipelines
+Caching Strategy: Redis-ready for performance optimization
+File Management: Secure upload and storage system
+Email Integration: Automated notifications and communications
+Backup Systems: Data export and recovery capabilities
+
+🛠️ Technology Stack
+Frontend: React 18+ (TypeScript), Vite, TailwindCSS, shadcn/ui, React Router
+Backend: Node.js, Express, MongoDB (Mongoose), JWT, Socket.IO, Winston, Multer, Nodemailer
+DevOps: Docker, PM2, Nginx, SSL/TLS, Automated backups
+
+Repository: https://github.com/Bilalabbasid/SMS`,
+    responsibilities: [
+      'Architected enterprise-grade MERN system with real-time features',
+      'Implemented role-based dashboards and granular permissions',
+      'Built student lifecycle, academic, and financial modules',
+      'Added enterprise logging, monitoring, and secure file handling'
+    ],
+    url: 'https://github.com/Bilalabbasid/SMS',
+    category: 'web',
+    type: 'public' as const,
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'JWT', 'Docker', 'Nginx', 'Redis'],
+    featured: true,
+    client: {
+      name: 'Education Solutions Ltd.',
+      industry: 'Education',
+      size: 'Enterprise'
+    },
+    createdAt: '2025-09-17T00:00:00.000Z',
+    updatedAt: '2025-09-17T00:00:00.000Z'
+  }
 ];
 
 // Deduplicate by slug (first occurrence wins)
