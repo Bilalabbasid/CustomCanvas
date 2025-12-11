@@ -81,6 +81,46 @@ const rawStaticProjects = [
     updatedAt: '2024-01-12T00:00:00.000Z'
   },
   {
+    _id: '5',
+    title: 'AlgoMinds - AI-Powered Solutions Platform',
+    slug: 'algominds-platform',
+    description: 'Advanced AI solutions platform providing intelligent automation, machine learning services, and web development.',
+    longDescription: 'AlgoMinds is a comprehensive platform that combines cutting-edge AI technologies with modern web development practices. The platform offers intelligent automation solutions, machine learning services, custom AI model development, and full-stack web applications tailored to client needs.',
+    responsibilities: ['AI/ML model development', 'Full-stack web development', 'API design and implementation', 'Cloud infrastructure setup'],
+    url: 'https://www.algominds.ai/',
+    category: 'web',
+    type: 'public' as const,
+    tech: ['React', 'Next.js', 'TypeScript', 'Python', 'TensorFlow', 'Node.js', 'AI/ML', 'REST APIs', 'Cloud'],
+    featured: true,
+    client: {
+      name: 'AlgoMinds',
+      industry: 'AI/Technology',
+      size: 'Startup'
+    },
+    createdAt: '2024-01-13T00:00:00.000Z',
+    updatedAt: '2024-01-13T00:00:00.000Z'
+  },
+  {
+    _id: '6',
+    title: 'TechMade - Technology Solutions',
+    slug: 'techmade-solutions',
+    description: 'Modern web platform with comprehensive API integrations and technology solutions.',
+    longDescription: 'TechMade delivers modern web applications with robust API integrations, providing technology solutions for businesses. The platform features responsive design, RESTful API architecture, real-time data processing, and seamless third-party service integrations.',
+    responsibilities: ['Web application development', 'RESTful API design', 'Third-party integrations', 'Performance optimization'],
+    url: 'https://techmade.vercel.app/',
+    category: 'web',
+    type: 'public' as const,
+    tech: ['React', 'Next.js', 'TypeScript', 'Node.js', 'REST APIs', 'Vercel', 'MongoDB', 'API Integration'],
+    featured: true,
+    client: {
+      name: 'TechMade',
+      industry: 'Technology',
+      size: 'Startup'
+    },
+    createdAt: '2024-01-14T00:00:00.000Z',
+    updatedAt: '2024-01-14T00:00:00.000Z'
+  },
+  {
     _id: '7',
     title: 'EduPortal - Learning Management System',
     slug: 'eduportal-lms',
@@ -164,7 +204,7 @@ const rawStaticProjects = [
     updatedAt: '2024-04-01T00:00:00.000Z'
   },
   {
-    _id: '8',
+    _id: '11',
     title: 'Atrios',
     slug: 'atrios',
     description: 'Cloud-based network security platform with DNS filtering, DDoS protection, and traffic analytics.',
@@ -184,7 +224,7 @@ const rawStaticProjects = [
     updatedAt: '2024-04-01T00:00:00.000Z'
   },
   {
-    _id: '8',
+    _id: '12',
     title: 'MicroCommerce - E-commerce Microservices',
     slug: 'microcommerce-services',
     description: 'Scalable microservices architecture for e-commerce with event sourcing, CQRS, and distributed transactions.',
@@ -203,7 +243,7 @@ const rawStaticProjects = [
     updatedAt: '2024-04-15T00:00:00.000Z'
   },
   {
-    _id: '10',
+    _id: '13',
     title: 'GameHub - Real-time Gaming Backend',
     slug: 'gamehub-backend',
     description: 'High-performance gaming backend with matchmaking, leaderboards, real-time multiplayer, and anti-cheat systems.',
@@ -222,7 +262,7 @@ const rawStaticProjects = [
     updatedAt: '2024-05-15T00:00:00.000Z'
   },
   {
-    _id: '10',
+    _id: '14',
     title: 'GameHub - Real-time Gaming Backend',
     slug: 'gamehub-backend',
     description: 'High-performance gaming backend with matchmaking, leaderboards, real-time multiplayer, and anti-cheat systems.',
@@ -355,6 +395,26 @@ const rawStaticProjects = [
     createdAt: '2025-06-30T00:00:00.000Z',
     updatedAt: '2025-06-30T00:00:00.000Z'
   },
+  {
+    _id: '30',
+    title: 'Restaurant POS with AI Forecasting',
+    slug: 'restaurant-pos-ai-forecasting',
+    description: 'Intelligent restaurant point-of-sale system with AI-powered sales forecasting, inventory management, and analytics.',
+    longDescription: 'Advanced restaurant management system combining traditional POS functionality with cutting-edge AI forecasting capabilities. The platform predicts sales trends, optimizes inventory levels, manages staff scheduling based on predicted demand, and provides comprehensive business analytics. Features include real-time order management, kitchen display integration, customer analytics, and machine learning models for demand forecasting.',
+    responsibilities: ['AI forecasting model development', 'POS system architecture', 'Inventory optimization algorithms', 'Real-time analytics dashboard', 'Mobile-responsive interface'],
+    url: 'https://resturant-os-frontend-8wdr.vercel.app',
+    category: 'ai',
+    type: 'public' as const,
+    tech: ['React', 'Next.js', 'TypeScript', 'Python', 'TensorFlow', 'Machine Learning', 'Node.js', 'PostgreSQL', 'Redis', 'Time Series Analysis', 'Vercel'],
+    featured: true,
+    client: {
+      name: 'RestaurantTech Solutions',
+      industry: 'Restaurant Technology',
+      size: 'Mid-size'
+    },
+    createdAt: '2024-01-15T00:00:00.000Z',
+    updatedAt: '2024-01-15T00:00:00.000Z'
+  },
 
   // MOBILE PROJECTS
 
@@ -483,7 +543,7 @@ const rawStaticProjects = [
   }
   ,
   {
-    _id: '30',
+    _id: '31',
     title: 'Evoke News - Mobile App & Website',
     slug: 'evoke-news-app',
   description: 'Breaking news Android/iOS app and companion website — Vue 3 frontend with FastAPI backend, crawler server, and Flutter mobile app. Backend deployed on DigitalOcean.',

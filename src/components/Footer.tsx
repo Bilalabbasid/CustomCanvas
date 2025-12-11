@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         >
           {/* Company Info */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-4">
+            <h3 className="text-2xl font-bold gradient-text mb-4">
               Code World
             </h3>
             <p className="text-gray-300 mb-4 leading-relaxed">

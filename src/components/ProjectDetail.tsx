@@ -10,34 +10,23 @@ import {
   UserGroupIcon,
   ChartBarIcon
 } from '@heroicons/react/24/outline';
-import { useProject } from '../hooks/useProjects';
+import { staticProjects } from '../data/staticProjects';
 
 const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { project, loading, error } = useProject(slug!);
+  const project = staticProjects.find(p => p.slug === slug);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-white dark:bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-300">Loading project...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error || !project) {
+  if (!project) {
     return (
       <div className="min-h-screen bg-white dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Project Not Found</h1>
           <p className="text-gray-600 dark:text-gray-300 mb-8">
-            {error || 'The project you\'re looking for doesn\'t exist.'}
+            The project you're looking for doesn't exist.
           </p>
           <Link 
             to="/#projects"
-            className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 hover:scale-105 transition-all duration-300 shadow-lg"
           >
             <ArrowLeftIcon className="h-5 w-5 mr-2" />
             Back to Projects
@@ -58,7 +47,7 @@ const ProjectDetail: React.FC = () => {
         >
           <Link 
             to="/#projects"
-            className="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
+            className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
           >
             <ArrowLeftIcon className="h-5 w-5 mr-2" />
             Back to Projects
@@ -100,7 +89,7 @@ const ProjectDetail: React.FC = () => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-accent-500 text-white rounded-lg hover:bg-accent-600 hover:scale-105 transition-all duration-300 shadow-lg"
               >
                 <span>Visit Project</span>
                 <ArrowTopRightOnSquareIcon className="h-5 w-5 ml-2" />
@@ -117,7 +106,7 @@ const ProjectDetail: React.FC = () => {
             {project.tech.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 text-sm rounded-lg font-medium"
+                className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-lg font-medium"
               >
                 {tech}
               </span>
@@ -313,7 +302,7 @@ const ProjectDetail: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center"
+          className="bg-primary-50 dark:bg-gray-800 rounded-2xl p-8 text-center border-2 border-primary-200 dark:border-primary-700 shadow-xl"
         >
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Interested in a Similar Project?
@@ -323,7 +312,7 @@ const ProjectDetail: React.FC = () => {
           </p>
           <Link
             to="/#contact"
-            className="inline-flex items-center px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-semibold"
+            className="inline-flex items-center px-8 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 hover:scale-105 transition-all duration-300 font-semibold shadow-lg"
           >
             Get in Touch
           </Link>

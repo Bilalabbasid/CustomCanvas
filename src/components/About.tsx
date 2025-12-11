@@ -8,25 +8,25 @@ const About: React.FC = () => {
       category: 'Frontend & Mobile',
       icon: <CodeBracketIcon className="h-8 w-8" />,
       items: ['React', 'Next.js', 'React Native', 'TypeScript'],
-      color: 'from-blue-500 to-cyan-500'
+      color: 'bg-electric-500'
     },
     {
       category: 'Backend & APIs',
       icon: <CpuChipIcon className="h-8 w-8" />,
       items: ['Node.js', 'Python', 'Go', 'GraphQL'],
-      color: 'from-emerald-500 to-teal-500'
+      color: 'bg-accent-500'
     },
     {
       category: 'AI & Machine Learning',
       icon: <ChartBarIcon className="h-8 w-8" />,
       items: ['LLMs', 'NLP', 'Computer Vision', 'TensorFlow'],
-      color: 'from-purple-500 to-pink-500'
+      color: 'bg-primary-500'
     },
     {
       category: 'Cloud & DevOps',
       icon: <CloudIcon className="h-8 w-8" />,
       items: ['AWS', 'GCP', 'Kubernetes', 'Docker'],
-      color: 'from-orange-500 to-red-500'
+      color: 'bg-accent-600'
     }
   ];
 
@@ -41,7 +41,7 @@ const About: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            About <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Code World</span>
+            About <span className="text-primary-500">Code World</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
             We help clients build cutting-edge digital products using modern technologies and AI-driven solutions. 
@@ -55,22 +55,41 @@ const About: React.FC = () => {
               key={tech.category}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: index * 0.15,
+                type: "spring",
+                stiffness: 100
+              }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
+              whileHover={{ 
+                y: -10,
+                scale: 1.05,
+                transition: { duration: 0.3 }
+              }}
+              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 hover:shadow-2xl transition-all duration-300 group"
             >
-              <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${tech.color} p-4 text-white mb-4 mx-auto flex items-center justify-center`}>
+              <motion.div 
+                className={`w-16 h-16 rounded-xl ${tech.color} p-4 text-white mb-4 mx-auto flex items-center justify-center shadow-lg`}
+                whileHover={{ rotate: 360, scale: 1.1 }}
+                transition={{ duration: 0.6 }}
+              >
                 {tech.icon}
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 text-center">
+              </motion.div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 text-center group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                 {tech.category}
               </h3>
               <ul className="space-y-2">
-                {tech.items.map((item) => (
-                  <li key={item} className="text-gray-600 dark:text-gray-300 text-center text-sm">
+                {tech.items.map((item, itemIndex) => (
+                  <motion.li 
+                    key={item} 
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 + itemIndex * 0.05 }}
+                    className="text-gray-600 dark:text-gray-300 text-center text-sm"
+                  >
                     {item}
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </motion.div>
@@ -84,7 +103,11 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">
+          <motion.div 
+            className="bg-primary-50 dark:bg-gray-800 rounded-2xl p-8 border-2 border-primary-200 dark:border-primary-700 shadow-xl"
+            whileHover={{ scale: 1.02, y: -5 }}
+            transition={{ duration: 0.3 }}
+          >
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Real-time dashboards and analytics that drive business decisions
             </h3>
@@ -92,7 +115,7 @@ const About: React.FC = () => {
               From handling billions of records per day to building intelligent systems that learn and adapt, 
               we create solutions that scale with your business and deliver measurable results.
             </p>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -65,8 +65,9 @@ const Header: React.FC = () => {
             className="flex-shrink-0 cursor-pointer"
             onClick={() => navigate('/')}
           >
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Code World
+            <h1 className="text-2xl font-bold">
+              <span className="text-gray-900 dark:text-white">Code </span>
+              <span className="text-primary-500">World</span>
             </h1>
           </motion.div>
 
@@ -78,7 +79,7 @@ const Header: React.FC = () => {
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
                   whileHover={{ y: -2 }}
-                  className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
+                  className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
                 >
                   {item.label}
                 </motion.button>
@@ -88,10 +89,10 @@ const Header: React.FC = () => {
 
           <div className="flex items-center space-x-4">
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, rotate: 180 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+              className="p-2 rounded-lg bg-electric-100 dark:bg-gray-800 text-electric-600 dark:text-electric-400 hover:bg-electric-200 dark:hover:bg-gray-700 transition-all duration-300"
             >
               {isDark ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
             </motion.button>
@@ -119,7 +120,7 @@ const Header: React.FC = () => {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+                className="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-primary-50 dark:hover:bg-gray-800 transition-colors duration-200"
               >
                 {item.label}
               </button>
