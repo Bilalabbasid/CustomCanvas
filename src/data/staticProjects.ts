@@ -81,26 +81,6 @@ const rawStaticProjects = [
     updatedAt: '2024-01-12T00:00:00.000Z'
   },
   {
-    _id: '5',
-    title: 'AlgoMinds - AI-Powered Solutions Platform',
-    slug: 'algominds-platform',
-    description: 'Advanced AI solutions platform providing intelligent automation, machine learning services, and web development.',
-    longDescription: 'AlgoMinds is a comprehensive platform that combines cutting-edge AI technologies with modern web development practices. The platform offers intelligent automation solutions, machine learning services, custom AI model development, and full-stack web applications tailored to client needs.',
-    responsibilities: ['AI/ML model development', 'Full-stack web development', 'API design and implementation', 'Cloud infrastructure setup'],
-    url: 'https://www.algominds.ai/',
-    category: 'web',
-    type: 'public' as const,
-    tech: ['React', 'Next.js', 'TypeScript', 'Python', 'TensorFlow', 'Node.js', 'AI/ML', 'REST APIs', 'Cloud'],
-    featured: true,
-    client: {
-      name: 'AlgoMinds',
-      industry: 'AI/Technology',
-      size: 'Startup'
-    },
-    createdAt: '2024-01-13T00:00:00.000Z',
-    updatedAt: '2024-01-13T00:00:00.000Z'
-  },
-  {
     _id: '6',
     title: 'TechMade - Technology Solutions',
     slug: 'techmade-solutions',
