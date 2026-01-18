@@ -1,0 +1,16 @@
+{
+  "name": "Code World - Enterprise Software Solutions",
+  "short_name": "Code World",
+  "description": "Enterprise software development and digital solutions",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#f97316",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
