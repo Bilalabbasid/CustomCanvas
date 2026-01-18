@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12" role="contentinfo" aria-label="Site footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -16,12 +16,12 @@ const Footer: React.FC = () => {
         >
           {/* Company Info */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold gradient-text mb-4">
+            <h3 className="text-2xl font-display font-extrabold gradient-text mb-4 tracking-tight">
               Code World
             </h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              We build smart software for a smarter future. Specializing in scalable, AI-powered, 
-              and data-driven solutions for startups and enterprises worldwide.
+              Enterprise software solutions that drive digital transformation. We architect, develop, 
+              and deploy mission-critical systems for organizations worldwide.
             </p>
             <div className="flex space-x-4">
               <motion.a
@@ -48,8 +48,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+          <nav aria-label="Services navigation">
+            <h4 className="text-lg font-display font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-300">
               <li><a href="#services" className="hover:text-indigo-400 transition-colors duration-200">Web Development</a></li>
               <li><a href="#services" className="hover:text-indigo-400 transition-colors duration-200">Mobile Apps</a></li>
@@ -57,18 +57,18 @@ const Footer: React.FC = () => {
               <li><a href="#services" className="hover:text-indigo-400 transition-colors duration-200">DevOps & Cloud</a></li>
               <li><a href="#services" className="hover:text-indigo-400 transition-colors duration-200">Data Analytics</a></li>
             </ul>
-          </div>
+          </nav>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+          <nav aria-label="Quick links navigation">
+            <h4 className="text-lg font-display font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-300">
               <li><a href="#about" className="hover:text-indigo-400 transition-colors duration-200">About</a></li>
               <li><a href="#projects" className="hover:text-indigo-400 transition-colors duration-200">Projects</a></li>
               <li><a href="#contact" className="hover:text-indigo-400 transition-colors duration-200">Contact</a></li>
-              <li><a href="#" className="hover:text-indigo-400 transition-colors duration-200">Get Proposal</a></li>
+              <li><a href="#lead-generation" className="hover:text-indigo-400 transition-colors duration-200">Get Proposal</a></li>
             </ul>
-          </div>
+          </nav>
         </motion.div>
 
         <motion.div

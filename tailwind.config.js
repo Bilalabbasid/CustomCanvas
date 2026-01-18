@@ -5,7 +5,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'inter': ['Inter', 'system-ui', 'sans-serif'],
+        'display': ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
+        'body': ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        'mono': ['"JetBrains Mono"', 'monospace'],
       },
       colors: {
         primary: {
@@ -76,6 +78,8 @@ export default {
         'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite',
         'neon-pulse': 'neonPulse 1.5s ease-in-out infinite',
+        'marquee': 'marquee 30s linear infinite',
+        'marquee-reverse': 'marquee-reverse 35s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -217,6 +221,14 @@ export default {
         neonPulse: {
           '0%, 100%': { boxShadow: '0 0 5px rgba(255, 51, 102, 0.5), 0 0 10px rgba(255, 51, 102, 0.3)' },
           '50%': { boxShadow: '0 0 20px rgba(255, 51, 102, 0.8), 0 0 30px rgba(255, 51, 102, 0.5)' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'marquee-reverse': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
         },
       },
     },

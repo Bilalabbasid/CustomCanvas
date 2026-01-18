@@ -58,17 +58,17 @@ const Header: React.FC = () => {
           : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div className="flex justify-between items-center h-16">
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex-shrink-0 cursor-pointer"
             onClick={() => navigate('/')}
           >
-            <h1 className="text-2xl font-bold">
+            <span className="text-2xl font-display font-extrabold tracking-tight" aria-label="Code World - Home">
               <span className="text-gray-900 dark:text-white">Code </span>
-              <span className="text-primary-500">World</span>
-            </h1>
+              <span className="gradient-text">World</span>
+            </span>
           </motion.div>
 
           {/* Desktop Navigation */}

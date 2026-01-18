@@ -86,11 +86,11 @@ Please send me a detailed proposal for this project including timeline, delivera
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Work With <span className="gradient-text">Us</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
+            Partner With <span className="gradient-text">Us</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Ready to transform your ideas into reality? Get a free proposal and let's build something amazing together.
+            Let's discuss how we can accelerate your digital transformation. Request a tailored proposal from our solutions team.
           </p>
         </motion.div>
 
@@ -198,7 +198,7 @@ Please send me a detailed proposal for this project including timeline, delivera
                 <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
               ) : (
                 <>
-                  <span>Get Free Proposal</span>
+                  <span>Request Technical Proposal</span>
                   <PaperAirplaneIcon className="h-5 w-5" />
                 </>
               )}
@@ -207,7 +207,7 @@ Please send me a detailed proposal for this project including timeline, delivera
 
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              We'll respond within 24 hours with a detailed proposal and next steps.
+              Our solutions architects will respond within 24 hours with a detailed technical proposal.
             </p>
           </div>
         </motion.div>

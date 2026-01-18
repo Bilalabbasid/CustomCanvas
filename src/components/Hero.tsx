@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
         {techSymbols.map((item, index) => (
           <motion.div
             key={`symbol-${index}`}
-            className={`absolute ${item.size} font-mono font-bold text-primary-500/30 dark:text-primary-400/20 select-none`}
+            className={`absolute ${item.size} font-mono font-semibold text-primary-500/25 dark:text-primary-400/15 select-none`}
             style={{ left: item.x, top: item.y }}
             animate={{
               y: [0, -30, 0],
@@ -159,7 +159,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 2, repeat: Infinity }}
               className="text-sm font-medium tracking-wide uppercase"
             >
-              Software Development Agency
+              Enterprise Software Solutions
             </motion.span>
           </motion.div>
 
@@ -167,21 +167,22 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold text-gray-900 dark:text-white leading-tight tracking-tight"
           >
             <motion.span 
-              className="block"
-              initial={{ x: -100, opacity: 0, rotateY: -90 }}
-              animate={{ x: 0, opacity: 1, rotateY: 0 }}
-              transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
+              className="inline"
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.6, type: "spring" }}
             >
               Code
             </motion.span>
+            {' '}
             <motion.span 
-              className="block text-primary-500"
-              initial={{ x: 100, opacity: 0, rotateY: 90 }}
-              animate={{ x: 0, opacity: 1, rotateY: 0 }}
-              transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
+              className="inline gradient-text"
+              initial={{ x: 50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.6, type: "spring" }}
             >
               World
             </motion.span>
@@ -191,9 +192,9 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.8, type: "spring" }}
-            className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            className="text-xl sm:text-2xl lg:text-3xl font-display font-medium text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
-            We build smart software for a smarter future.
+            Transforming Ideas Into Scalable Solutions
           </motion.p>
 
           <motion.p
@@ -202,7 +203,7 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="text-lg text-gray-500 dark:text-gray-400 max-w-3xl mx-auto"
           >
-            Delivering scalable, AI-powered, and data-driven software solutions for startups and enterprises worldwide.
+            End-to-end software development, cloud architecture, and AI integration for enterprises that demand excellence.
           </motion.p>
 
           <motion.div
@@ -227,7 +228,7 @@ const Hero: React.FC = () => {
               }}
               className="group bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg flex items-center space-x-2"
             >
-              <span>Get in Touch</span>
+              <span>Schedule a Consultation</span>
               <motion.div
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
@@ -242,7 +243,7 @@ const Hero: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg border-2 border-accent-500 hover:border-accent-600 hover:shadow-xl"
             >
-              See Our Work
+              View Case Studies
             </motion.a>
           </motion.div>
         </motion.div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   ArrowLeftIcon, 
@@ -7,14 +7,19 @@ import {
   ServerIcon, 
   GlobeAltIcon,
   CalendarIcon,
-  UserGroupIcon,
   ChartBarIcon
 } from '@heroicons/react/24/outline';
 import { staticProjects } from '../data/staticProjects';
 
 const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const project = staticProjects.find(p => p.slug === slug);
+
+  // Go back to previous page (preserves scroll position)
+  const handleGoBack = () => {
+    navigate(-1);
+  };
 
   if (!project) {
     return (
@@ -24,13 +29,13 @@ const ProjectDetail: React.FC = () => {
           <p className="text-gray-600 dark:text-gray-300 mb-8">
             The project you're looking for doesn't exist.
           </p>
-          <Link 
-            to="/#projects"
+          <button 
+            onClick={handleGoBack}
             className="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 hover:scale-105 transition-all duration-300 shadow-lg"
           >
             <ArrowLeftIcon className="h-5 w-5 mr-2" />
             Back to Projects
-          </Link>
+          </button>
         </div>
       </div>
     );
@@ -45,13 +50,13 @@ const ProjectDetail: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           className="mb-8"
         >
-          <Link 
-            to="/#projects"
+          <button 
+            onClick={handleGoBack}
             className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
           >
             <ArrowLeftIcon className="h-5 w-5 mr-2" />
             Back to Projects
-          </Link>
+          </button>
         </motion.div>
 
         {/* Project Header */}
@@ -60,13 +65,13 @@ const ProjectDetail: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="mb-12"
         >
-          <div className="flex items-start justify-between mb-6">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
             <div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                 {project.title}
               </h1>
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="flex items-center space-x-2">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <div className="flex items-center gap-2">
                   {project.type === 'private' ? (
                     <ServerIcon className="h-5 w-5 text-gray-400" />
                   ) : (
@@ -89,7 +94,7 @@ const ProjectDetail: React.FC = () => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-accent-500 text-white rounded-lg hover:bg-accent-600 hover:scale-105 transition-all duration-300 shadow-lg"
+                className="inline-flex items-center px-6 py-3 bg-accent-500 text-white rounded-lg hover:bg-accent-600 hover:scale-105 transition-all duration-300 shadow-lg flex-shrink-0"
               >
                 <span>Visit Project</span>
                 <ArrowTopRightOnSquareIcon className="h-5 w-5 ml-2" />
@@ -97,7 +102,7 @@ const ProjectDetail: React.FC = () => {
             )}
           </div>
 
-          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
             {project.description}
           </p>
 
@@ -115,18 +120,18 @@ const ProjectDetail: React.FC = () => {
         </motion.div>
 
         {/* Project Details Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-6">
             {/* Long Description */}
             {project.longDescription && (
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8"
+                className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8"
               >
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">
                   Project Overview
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -140,15 +145,15 @@ const ProjectDetail: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8"
+              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8"
             >
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Key Responsibilities
               </h2>
               <ul className="space-y-3">
                 {project.responsibilities.map((resp, idx) => (
                   <li key={idx} className="flex items-start">
-                    <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                     <span className="text-gray-600 dark:text-gray-300">{resp}</span>
                   </li>
                 ))}
@@ -161,18 +166,19 @@ const ProjectDetail: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8"
+                className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8"
               >
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6">
                   Project Gallery
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {project.images.map((image, idx) => (
                     <div key={idx} className="rounded-lg overflow-hidden">
                       <img
                         src={image.url}
                         alt={image.alt}
                         className="w-full h-48 object-cover"
+                        loading="lazy"
                       />
                       {image.caption && (
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
@@ -302,9 +308,9 @@ const ProjectDetail: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="bg-primary-50 dark:bg-gray-800 rounded-2xl p-8 text-center border-2 border-primary-200 dark:border-primary-700 shadow-xl"
+          className="bg-primary-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 text-center border-2 border-primary-200 dark:border-primary-700 shadow-xl"
         >
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Interested in a Similar Project?
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mb-6">

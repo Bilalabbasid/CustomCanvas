@@ -80,11 +80,11 @@ const Contact: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Ready to start your project? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Connect with our team to discuss your software requirements. We're here to help you build the right solution.
           </p>
         </motion.div>
 
@@ -99,11 +99,11 @@ const Contact: React.FC = () => {
           >
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Let's Build Something Amazing
+                Let's Discuss Your Requirements
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
-                Whether you need a web application, mobile app, AI integration, or cloud infrastructure, 
-                we're here to help bring your vision to life.
+                From enterprise web applications to cloud migrations and AI implementations, 
+                our solutions team is ready to architect the right approach for your business.
               </p>
             </div>
 
@@ -159,10 +159,10 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="bg-accent-50 dark:bg-gray-700 rounded-xl p-6 border-2 border-accent-200 dark:border-accent-700 shadow-md">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Quick Response Time</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Enterprise-Ready Support</h4>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                We typically respond to all inquiries within 24 hours. For urgent projects, 
-                we'll get back to you within a few hours.
+                Our team responds within 24 hours for all inquiries. Enterprise clients receive 
+                dedicated support with guaranteed SLAs.
               </p>
             </div>
           </motion.div>
