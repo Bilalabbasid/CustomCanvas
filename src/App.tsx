@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import { ScrollRestoration } from './hooks/useScrollRestoration';
+import { useSmoothScroll } from './hooks/useSmoothScroll';
 
 const HomePage = () => (
   <>
@@ -25,6 +26,9 @@ const HomePage = () => (
 );
 
 function App() {
+  // Initialize smooth scroll
+  useSmoothScroll();
+  
   return (
     <ThemeProvider>
       <Router>

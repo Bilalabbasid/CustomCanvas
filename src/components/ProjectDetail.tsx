@@ -59,6 +59,21 @@ const ProjectDetail: React.FC = () => {
           </button>
         </motion.div>
 
+        {/* Project Hero Image */}
+        {project.image && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8 rounded-2xl overflow-hidden shadow-2xl"
+          >
+            <img 
+              src={project.image} 
+              alt={project.title}
+              className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+            />
+          </motion.div>
+        )}
+
         {/* Project Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

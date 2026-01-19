@@ -1,171 +1,175 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { CodeBracketIcon, CpuChipIcon, CloudIcon, ChartBarIcon, SparklesIcon, RocketLaunchIcon } from '@heroicons/react/24/outline';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About: React.FC = () => {
-  const technologies = [
-    {
-      category: 'Frontend & Mobile',
-      icon: <CodeBracketIcon className="h-8 w-8" />,
-      items: ['React', 'Next.js', 'React Native', 'TypeScript'],
-      gradient: 'from-blue-500 to-cyan-500',
-      bgGradient: 'from-blue-500/10 to-cyan-500/10'
-    },
-    {
-      category: 'Backend & APIs',
-      icon: <CpuChipIcon className="h-8 w-8" />,
-      items: ['Node.js', 'Python', 'Go', 'GraphQL'],
-      gradient: 'from-emerald-500 to-teal-500',
-      bgGradient: 'from-emerald-500/10 to-teal-500/10'
-    },
-    {
-      category: 'AI & Machine Learning',
-      icon: <ChartBarIcon className="h-8 w-8" />,
-      items: ['LLMs', 'NLP', 'Computer Vision', 'TensorFlow'],
-      gradient: 'from-purple-500 to-pink-500',
-      bgGradient: 'from-purple-500/10 to-pink-500/10'
-    },
-    {
-      category: 'Cloud & DevOps',
-      icon: <CloudIcon className="h-8 w-8" />,
-      items: ['AWS', 'GCP', 'Kubernetes', 'Docker'],
-      gradient: 'from-orange-500 to-amber-500',
-      bgGradient: 'from-orange-500/10 to-amber-500/10'
-    }
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Title animation on scroll
+      gsap.from(titleRef.current, {
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 80%',
+          end: 'top 20%',
+          scrub: 1,
+        },
+        y: 100,
+        opacity: 0,
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const stats = [
+    { number: '50+', label: 'Projects Delivered' },
+    { number: '100%', label: 'Client Satisfaction' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '24/7', label: 'Support Available' },
   ];
 
   return (
-    <section id="about" className="py-24 bg-white dark:bg-gray-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, type: "spring" }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500/10 rounded-full mb-6"
-          >
-            <RocketLaunchIcon className="h-5 w-5 text-primary-500" />
-            <span className="text-primary-600 dark:text-primary-400 text-sm font-medium">Your Technology Partner</span>
-          </motion.div>
+    <section 
+      id="about" 
+      ref={sectionRef}
+      className="relative py-32 bg-white dark:bg-black overflow-hidden"
+    >
+      {/* Large background text */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden opacity-[0.02] dark:opacity-[0.03] pointer-events-none">
+        <span className="text-[20vw] font-display font-bold whitespace-nowrap text-gray-900 dark:text-white">
+          WHO WE ARE
+        </span>
+      </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
-            About <span className="gradient-text">Code World</span>
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            We partner with forward-thinking organizations to architect, develop, and deploy mission-critical software systems. 
-            From digital transformation initiatives to custom enterprise solutions, we deliver technology that drives competitive advantage.
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main heading */}
+        <motion.h2
+          ref={titleRef}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true }}
+          className="text-5xl sm:text-6xl md:text-8xl font-display font-bold text-gray-900 dark:text-white mb-12 leading-tight"
+        >
+          WE BUILD
+          <br />
+          <span className="bg-gradient-to-r from-primary-500 via-accent-500 to-electric-500 bg-clip-text text-transparent">
+            DIGITAL FUTURE
+          </span>
+        </motion.h2>
+
+        {/* Description */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true }}
+          className="max-w-4xl mb-24"
+        >
+          <p className="text-2xl sm:text-3xl md:text-4xl font-body text-gray-600 dark:text-gray-400 leading-relaxed">
+            We partner with enterprises to build scalable software solutions. From AI integration to cloud architecture, we deliver technology that drives growth.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {technologies.map((tech, index) => (
+        {/* Stats Grid */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 1 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          {stats.map((stat, index) => (
             <motion.div
-              key={tech.category}
+              key={stat.label}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.6, 
-                delay: index * 0.15,
-                type: "spring",
-                stiffness: 100
-              }}
+              transition={{ delay: 0.5 + index * 0.1, duration: 0.8 }}
               viewport={{ once: true }}
-              whileHover={{ 
-                y: -10,
-                scale: 1.03,
-                transition: { duration: 0.3 }
-              }}
-              className={`relative bg-gradient-to-br ${tech.bgGradient} rounded-2xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:shadow-2xl transition-all duration-500 group overflow-hidden`}
+              className="text-center"
             >
-              {/* Decorative element */}
-              <div className={`absolute -right-4 -top-4 w-24 h-24 bg-gradient-to-br ${tech.gradient} rounded-full opacity-10 group-hover:opacity-20 transition-opacity`} />
-              
-              <motion.div 
-                className={`relative w-16 h-16 rounded-xl bg-gradient-to-br ${tech.gradient} p-4 text-white mb-4 mx-auto flex items-center justify-center shadow-lg`}
-                whileHover={{ rotate: 360, scale: 1.1 }}
-                transition={{ duration: 0.6 }}
-              >
-                {tech.icon}
-              </motion.div>
-              
-              <h3 className="relative text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                {tech.category}
-              </h3>
-              
-              <ul className="relative space-y-2">
-                {tech.items.map((item, itemIndex) => (
-                  <motion.li 
-                    key={item} 
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 + itemIndex * 0.05 }}
-                    className="flex items-center justify-center text-gray-600 dark:text-gray-300 text-sm"
-                  >
-                    <div className={`w-1.5 h-1.5 bg-gradient-to-r ${tech.gradient} rounded-full mr-2`} />
-                    {item}
-                  </motion.li>
-                ))}
-              </ul>
+              <div className="text-5xl sm:text-6xl md:text-7xl font-display font-bold bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent mb-2">
+                {stat.number}
+              </div>
+              <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400 uppercase tracking-wider font-mono">
+                {stat.label}
+              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
+        {/* Tech Stack */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 1 }}
           viewport={{ once: true }}
-          className="mt-16"
+          className="mt-32 border-t border-gray-200 dark:border-gray-800 pt-16"
         >
-          <motion.div 
-            className="relative bg-gradient-to-r from-primary-500/10 via-accent-500/10 to-electric-500/10 rounded-3xl p-8 md:p-12 border border-primary-200/50 dark:border-primary-700/50 overflow-hidden"
-            whileHover={{ scale: 1.01, y: -5 }}
-            transition={{ duration: 0.3 }}
-          >
-            {/* Background decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-accent-500/20 to-electric-500/20 rounded-full blur-3xl" />
-            
-            <div className="relative text-center">
+          <h3 className="text-3xl sm:text-4xl font-display font-bold text-gray-900 dark:text-white mb-12">
+            TECHNOLOGY STACK
+          </h3>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6" style={{ perspective: '1000px' }}>
+            {['React', 'Node.js', 'Python', 'AWS', 'TypeScript', 'MongoDB', 'Next.js', 'Docker'].map((tech, index) => (
               <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="inline-block mb-4"
+                key={tech}
+                initial={{ opacity: 0, rotateY: -90 }}
+                whileInView={{ opacity: 1, rotateY: 0 }}
+                transition={{ 
+                  delay: 0.7 + index * 0.08, 
+                  duration: 0.6,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                viewport={{ once: true }}
+                whileHover={{ 
+                  rotateY: 15,
+                  rotateX: 10,
+                  scale: 1.1,
+                  z: 50,
+                  transition: { duration: 0.3 }
+                }}
+                className="relative py-8 px-6 border border-gray-200 dark:border-gray-800 rounded-xl text-center font-mono text-gray-900 dark:text-white hover:border-primary-500 dark:hover:border-primary-500 transition-all cursor-pointer group"
+                style={{
+                  transformStyle: 'preserve-3d',
+                  transform: 'translateZ(0)'
+                }}
               >
-                <SparklesIcon className="h-12 w-12 text-primary-500" />
+                {/* Glossy overlay effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl pointer-events-none" />
+                
+                {/* Shimmer effect */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                  animate={{
+                    x: ['-200%', '200%']
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatDelay: 2,
+                    ease: "linear"
+                  }}
+                  style={{ transform: 'translateZ(1px)' }}
+                />
+                
+                {/* Tech name */}
+                <span className="relative z-10 text-lg font-semibold" style={{ transform: 'translateZ(20px)' }}>
+                  {tech}
+                </span>
+                
+                {/* Background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/0 via-accent-500/0 to-electric-500/0 group-hover:from-primary-500/10 group-hover:via-accent-500/10 group-hover:to-electric-500/10 rounded-xl transition-all duration-500 -z-10" />
               </motion.div>
-              
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Building software that{' '}
-                <span className="gradient-text">powers your business growth</span>
-              </h3>
-              
-              <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg">
-                Our solutions process millions of transactions, serve global user bases, and integrate seamlessly with your existing infrastructure. 
-                We build systems designed for reliability, performance, and long-term maintainability.
-              </p>
-
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                {['Enterprise-Grade Security', 'High Availability', '24/7 Support', 'Agile Methodology'].map((item, idx) => (
-                  <motion.span
-                    key={item}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 + idx * 0.1 }}
-                    className="px-4 py-2 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200/50 dark:border-gray-700/50"
-                  >
-                    {item}
-                  </motion.span>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

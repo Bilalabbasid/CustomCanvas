@@ -5,6 +5,7 @@ export const staticProjects = [
     title: 'Enterprise Banking Platform',
     slug: 'enterprise-banking-platform',
     description: 'Next-generation digital banking platform serving 2M+ customers with real-time transactions, AI fraud detection, and seamless mobile experience.',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop',
     longDescription: `A comprehensive digital banking transformation project that modernized legacy banking infrastructure into a cloud-native, microservices-based platform. The system handles over 5 million daily transactions with 99.99% uptime, serving both retail and corporate banking customers.
 
 Key achievements include reducing transaction processing time from 3 seconds to under 200ms, implementing AI-powered fraud detection that prevented $15M+ in fraudulent transactions in the first year, and launching a mobile-first experience that increased customer engagement by 340%.
@@ -40,6 +41,7 @@ The platform features real-time payment processing, multi-currency support, biom
     title: 'AI-Powered Healthcare Diagnostics',
     slug: 'ai-healthcare-diagnostics',
     description: 'FDA-approved AI platform for medical image analysis, achieving 97% accuracy in early cancer detection across radiology workflows.',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop',
     longDescription: `Revolutionary healthcare AI platform that assists radiologists in analyzing medical images with unprecedented accuracy. The system processes X-rays, CT scans, MRIs, and mammograms, providing AI-powered second opinions that have improved early cancer detection rates by 34%.
 
 The platform integrates seamlessly with existing PACS systems and radiology workflows, requiring no changes to existing hospital infrastructure. Our deep learning models, trained on 10M+ annotated medical images, achieve 97% accuracy in detecting abnormalities, matching or exceeding human radiologist performance.
@@ -75,6 +77,7 @@ Key features include automated prioritization of urgent cases (reducing critical
     title: 'Global E-Commerce Marketplace',
     slug: 'global-ecommerce-marketplace',
     description: 'High-traffic marketplace handling $500M+ annual GMV with real-time inventory, AI recommendations, and multi-vendor management.',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
     longDescription: `Enterprise-scale e-commerce platform supporting 50,000+ sellers and millions of products across 30 countries. The platform processes over 100,000 orders daily during peak periods, with a sophisticated multi-vendor architecture that ensures seamless buyer and seller experiences.
 
 The recommendation engine, powered by collaborative filtering and deep learning, drives 35% of total revenue through personalized product suggestions. Real-time inventory management across multiple warehouses and drop-ship vendors ensures accurate stock levels with 99.8% inventory accuracy.
@@ -111,6 +114,7 @@ Advanced features include dynamic pricing optimization, fraud prevention, multi-
     title: 'Autonomous Fleet Management',
     slug: 'autonomous-fleet-management',
     description: 'IoT platform managing 10,000+ vehicles with real-time tracking, predictive maintenance, and route optimization saving $20M annually.',
+    image: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?q=80&w=1200&auto=format&fit=crop',
     longDescription: `Comprehensive fleet management platform that transformed a major logistics company's operations through real-time vehicle tracking, AI-powered route optimization, and predictive maintenance capabilities.
 
 The platform manages 10,000+ vehicles across 15 countries, processing 50 million GPS data points daily to provide real-time visibility into fleet operations. Our route optimization algorithm, considering traffic patterns, weather, delivery windows, and driver hours, has reduced fuel costs by 23% and improved on-time delivery rates to 98.5%.
@@ -146,6 +150,7 @@ Predictive maintenance models analyze 200+ vehicle sensors to predict component 
     title: 'Real-Time Trading Platform',
     slug: 'realtime-trading-platform',
     description: 'Ultra-low-latency trading system processing 1M+ trades daily with algorithmic trading, risk management, and regulatory reporting.',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop',
     longDescription: `High-frequency trading platform designed for institutional investors, processing over 1 million trades daily with average latency under 5 milliseconds. The system supports equities, fixed income, derivatives, and cryptocurrency trading across 40+ global exchanges.
 
 The algorithmic trading engine supports complex multi-leg strategies, smart order routing, and real-time risk management with sub-millisecond position updates. Advanced features include pre-trade compliance checks, real-time P&L calculation, and automated regulatory reporting (MiFID II, EMIR, Dodd-Frank).
@@ -183,6 +188,7 @@ The platform's architecture achieves 99.999% availability with active-active mul
     title: 'Falaya - Real Estate Marketplace',
     slug: 'falaya',
     description: 'End-to-end real estate platform revolutionizing property transactions with digital paperwork, virtual tours, and AI-powered valuations.',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop',
     longDescription: `Falaya is transforming the real estate industry by digitizing the entire property transaction lifecycle. From initial listing to closing, the platform eliminates paperwork, reduces transaction time by 60%, and provides unprecedented transparency for buyers, sellers, and agents.
 
 Key features include AI-powered property valuations using comparable sales and market trends, 3D virtual tours with immersive walkthroughs, digital document management with e-signatures, and a sophisticated matching algorithm that connects buyers with properties matching their preferences and budget.
@@ -219,6 +225,7 @@ The platform has facilitated over $500M in property transactions, with an averag
     title: 'IntellicV - AI Resume Assistant',
     slug: 'intellicv-ai-assistant',
     description: 'GPT-powered resume builder that transforms career narratives through conversational AI, helping 50K+ professionals land their dream jobs.',
+    image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1200&auto=format&fit=crop',
     longDescription: `IntellicV revolutionizes resume creation by combining conversational AI with deep understanding of hiring practices. Users describe their experience naturally, and our AI crafts ATS-optimized resumes tailored to specific job descriptions and industries.
 
 The platform analyzes job postings to identify key requirements, then guides users through a conversation to highlight relevant experiences and quantified achievements. Our AI has been trained on 100,000+ successful resumes and hiring data from Fortune 500 companies.
@@ -255,6 +262,7 @@ Features include real-time ATS scoring, industry-specific templates, cover lette
     title: 'LastChance Ticket - Event Platform',
     slug: 'lastchance-ticket-booking',
     description: 'High-performance ticketing platform handling 100K+ concurrent users during major events with real-time inventory and instant checkout.',
+    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=1200&auto=format&fit=crop',
     longDescription: `LastChance Ticket is a battle-tested event ticketing platform designed to handle extreme traffic spikes during high-demand events. The system has successfully processed 500,000+ ticket sales in under 10 minutes during major concert on-sales without any downtime.
 
 The platform features intelligent queue management that fairly distributes access during high-demand periods, real-time inventory with sub-second accuracy, dynamic pricing based on demand, and a checkout flow optimized for mobile with 98% completion rate.
@@ -291,6 +299,7 @@ Event organizers benefit from comprehensive analytics, customizable event pages,
     title: 'Enterprise Learning Management System',
     slug: 'enterprise-lms',
     description: 'Comprehensive LMS deployed across 50+ universities with AI-powered tutoring, adaptive learning paths, and real-time collaboration.',
+    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop',
     longDescription: `A next-generation learning management system designed for higher education institutions, currently serving 500,000+ students across 50+ universities globally. The platform combines traditional LMS functionality with AI-powered personalization and modern collaboration tools.
 
 The adaptive learning engine analyzes student performance in real-time, adjusting content difficulty and suggesting supplementary materials to optimize learning outcomes. Our AI tutor provides 24/7 homework help with step-by-step explanations, improving student comprehension by 40%.
@@ -326,6 +335,7 @@ Features include live virtual classrooms with breakout rooms, plagiarism detecti
     title: 'Restaurant POS with AI Forecasting',
     slug: 'restaurant-pos-ai-forecasting',
     description: 'Intelligent restaurant management system with AI sales forecasting, inventory optimization, and real-time analytics saving 25% on food costs.',
+    image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop',
     longDescription: `A comprehensive restaurant management platform that combines traditional POS functionality with cutting-edge AI capabilities. The system helps restaurants optimize operations, reduce waste, and increase profitability through data-driven insights.
 
 The AI forecasting engine predicts daily sales by menu item with 92% accuracy, enabling precise inventory ordering and staff scheduling. Restaurants using our platform report 25% reduction in food waste and 15% improvement in labor efficiency.
@@ -364,6 +374,7 @@ Features include real-time order management, kitchen display system integration,
     title: 'HealthConnect - Telemedicine Platform',
     slug: 'healthconnect-telemedicine',
     description: 'HIPAA-compliant telemedicine app with 1M+ video consultations, AI symptom checker, and integrated prescription management.',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop',
     longDescription: `HealthConnect is a comprehensive telemedicine platform that has transformed healthcare delivery for a major health system, facilitating over 1 million video consultations annually. The platform provides patients with 24/7 access to healthcare providers from the comfort of their homes.
 
 The AI-powered symptom checker helps patients describe their conditions and routes them to appropriate care levels, reducing unnecessary ER visits by 35%. Integration with the health system's EHR ensures providers have complete patient history during consultations.
@@ -398,6 +409,7 @@ Features include HD video consultations with screen sharing, secure messaging, e
   {
     _id: '12',
     title: 'FitCoach - AI Fitness Companion',
+    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1200&auto=format&fit=crop',
     slug: 'fitcoach-ai-fitness',
     description: 'Personalized fitness app with AI workout generation, real-time form analysis using computer vision, and 500K+ active users.',
     longDescription: `FitCoach is an intelligent fitness companion that creates personalized workout plans based on user goals, fitness level, and available equipment. With 500,000+ active users, the app has helped people complete over 10 million workouts.
@@ -436,6 +448,7 @@ Features include personalized meal plans with macro tracking, integration with w
     title: 'Evoke News - Breaking News App',
     slug: 'evoke-news-app',
     description: 'Real-time news app with AI-powered content curation, video integration, and personalized news feeds serving 200K+ daily readers.',
+    image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1200&auto=format&fit=crop',
     longDescription: `Evoke News delivers breaking news to 200,000+ daily active users through a sophisticated content platform combining human editorial oversight with AI-powered personalization. The app aggregates news from 500+ sources, curating content based on user interests and reading patterns.
 
 The backend features a custom crawler that indexes 10,000+ articles daily, with NLP-based categorization and sentiment analysis. YouTube API integration provides video news content, while push notifications ensure users never miss breaking stories.
@@ -472,6 +485,7 @@ Features include offline reading, customizable news categories, bookmarking, sha
     title: 'TravelMate - Smart Trip Planner',
     slug: 'travelmate-trip-planning',
     description: 'AI-powered travel app creating personalized itineraries, with offline maps, expense tracking, and real-time flight updates.',
+    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1200&auto=format&fit=crop',
     longDescription: `TravelMate simplifies travel planning with AI-generated itineraries tailored to user preferences, budget, and interests. The app has helped plan over 100,000 trips, with users rating their travel experiences 4.8/5 stars on average.
 
 The AI considers factors like travel style, pace preferences, dietary restrictions, accessibility needs, and budget to create day-by-day itineraries with restaurant recommendations, activity bookings, and optimal routing between destinations.
@@ -510,6 +524,7 @@ Features include offline maps and guides, real-time flight/train tracking, colla
     title: 'DocSearch RAG - Enterprise Knowledge',
     slug: 'docsearch-rag-system',
     description: 'Retrieval-Augmented Generation platform enabling semantic search across 10M+ enterprise documents with conversational Q&A.',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
     longDescription: `DocSearch RAG transforms how enterprises access institutional knowledge by enabling natural language queries across millions of documents. The platform has reduced time-to-information by 80% for knowledge workers at Fortune 500 companies.
 
 The system ingests documents from multiple sources (SharePoint, Google Drive, Confluence, file servers), processes them through our embedding pipeline, and stores vectors in a high-performance vector database. Users can ask questions in natural language and receive accurate answers with source citations.
@@ -545,6 +560,7 @@ Features include document summarization, automatic categorization, access contro
     title: 'CodeReview AI - Automated Analysis',
     slug: 'codereview-ai-analysis',
     description: 'AI code review platform integrated with 5,000+ repositories, catching 40% more bugs than manual review alone.',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
     longDescription: `CodeReview AI augments development teams with AI-powered code analysis that catches bugs, security vulnerabilities, and code quality issues before they reach production. The platform integrates with GitHub and GitLab, providing automated reviews on every pull request.
 
 Our models, trained on millions of code reviews from open source projects, understand context and can identify subtle bugs that static analysis tools miss. The system catches 40% more issues than manual review alone while reducing review time by 50%.
@@ -581,6 +597,7 @@ Features include security vulnerability detection (OWASP Top 10), code quality s
     title: 'LegalDocs AI - Contract Intelligence',
     slug: 'legaldocs-contract-analysis',
     description: 'AI platform for contract analysis reducing legal review time by 70%, with clause extraction, risk scoring, and obligation tracking.',
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200&auto=format&fit=crop',
     longDescription: `LegalDocs AI helps legal teams review contracts faster and more accurately using advanced NLP. The platform has analyzed over 500,000 contracts, reducing average review time from 4 hours to 45 minutes while improving consistency.
 
 The system automatically extracts key clauses, identifies unusual terms, scores contractual risk, and tracks obligations with automated reminders. Contract comparison highlights differences between versions or against standard templates.
@@ -618,6 +635,7 @@ Features include redlining suggestions, playbook-based negotiation guidance, cla
     title: 'Business Intelligence Platform',
     slug: 'business-intelligence-platform',
     description: 'Enterprise BI platform with real-time dashboards, ETL pipelines processing 1B+ records daily, and self-service analytics.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
     longDescription: `A comprehensive Business Intelligence platform that transforms raw data into strategic insights for enterprise decision-makers. The platform processes over 1 billion records daily from 50+ data sources, providing real-time dashboards and self-service analytics.
 
 The ETL engine supports complex transformations with data quality rules, handling everything from simple CSV uploads to real-time streaming from Kafka. Role-based access ensures executives, managers, and analysts each see relevant metrics and drill-down capabilities.
@@ -654,6 +672,7 @@ Features include custom chart builder, automated report scheduling, anomaly dete
     title: 'Atrios - Network Security Analytics',
     slug: 'atrios-security',
     description: 'Cloud-based network security platform analyzing 10B+ DNS queries daily with real-time threat detection and DDoS protection.',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop',
     longDescription: `Atrios is an enterprise-grade network security platform providing comprehensive protection through DNS filtering, DDoS mitigation, and advanced traffic analytics. The system processes over 10 billion DNS queries daily, blocking millions of threats in real-time.
 
 The threat intelligence engine combines machine learning with curated threat feeds to identify malicious domains, phishing attempts, and command-and-control traffic. Real-time analytics provide security teams with visibility into network activity, with drill-down to individual query level.
@@ -690,6 +709,7 @@ Features include customizable filtering policies, DNS-over-HTTPS/TLS support, in
     title: 'Custom CRM Platform',
     slug: 'custom-crm',
     description: 'Full-featured CRM with role-based dashboards, sales pipeline automation, and analytics driving 35% increase in sales efficiency.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
     longDescription: `A comprehensive Customer Relationship Management platform designed for sales-driven organizations. The system provides role-based experiences for executives, managers, and sales representatives, with dashboards tailored to each role's needs.
 
 The sales pipeline automation features intelligent lead scoring, automated follow-up sequences, territory management, and quota tracking. Integration with email, calendar, and communication tools ensures all customer interactions are captured automatically.
@@ -728,6 +748,7 @@ Features include customizable sales stages, forecasting with ML-based prediction
     title: 'School Management System',
     slug: 'school-management-system-enterprise',
     description: 'Enterprise school management with student lifecycle tracking, academic records, financial management, and parent portal.',
+    image: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=1200&auto=format&fit=crop',
     longDescription: `A commercial-grade School Management System serving K-12 institutions and universities. The platform manages the complete student lifecycle from admission to graduation, with comprehensive modules for academics, finance, and communication.
 
 The system supports complex organizational structures with multiple campuses, grade levels, and academic programs. Role-based access ensures administrators, teachers, students, and parents each have appropriate access to relevant features.
@@ -764,6 +785,7 @@ Features include online admissions, class scheduling with conflict detection, gr
     title: 'EventHub - Virtual Events Platform',
     slug: 'eventhub-virtual-events',
     description: 'Enterprise virtual events platform hosting 500+ events with live streaming, networking rooms, and exhibitor booths.',
+    image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200&auto=format&fit=crop',
     longDescription: `EventHub enables organizations to host engaging virtual and hybrid events at scale. The platform has successfully hosted 500+ events including conferences, trade shows, and corporate meetings, with up to 50,000 concurrent attendees.
 
 The architecture supports HD live streaming, multiple simultaneous sessions, virtual networking rooms with video chat, exhibitor booths with lead capture, and comprehensive engagement tools including polls, Q&A, and gamification.
@@ -800,6 +822,7 @@ Features include event registration with ticketing, customizable event branding,
     title: 'LearnPlayBond - EdTech Platform',
     slug: 'learnplaybond',
     description: 'Interactive learning platform combining gamification with education, serving 50K+ students with engaging content.',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop',
     longDescription: `LearnPlayBond makes learning fun through gamification, interactive lessons, and collaborative tools. The platform serves 50,000+ students with content covering math, science, languages, and more.
 
 The gamification engine awards points, badges, and achievements for completing lessons and challenges, driving student engagement. Leaderboards and team challenges foster healthy competition while collaborative features enable peer learning.
@@ -836,6 +859,7 @@ Features include interactive video lessons, practice quizzes with instant feedba
     title: 'CloudOps - Multi-Cloud Management',
     slug: 'cloudops-management',
     description: 'Unified cloud management platform optimizing $50M+ annual cloud spend across AWS, Azure, and GCP.',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop',
     longDescription: `CloudOps provides unified visibility and control across multi-cloud environments, helping enterprises optimize their $50M+ annual cloud spend. The platform currently manages 10,000+ cloud resources across AWS, Azure, and GCP.
 
 The cost optimization engine identifies idle resources, rightsizing opportunities, and reserved instance recommendations, delivering average savings of 30%. Security compliance automation ensures continuous adherence to frameworks like SOC 2, HIPAA, and PCI-DSS.
