@@ -117,7 +117,7 @@ const About: React.FC = () => {
           </h3>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6" style={{ perspective: '1000px' }}>
-            {['React', 'Node.js', 'Python', 'AWS', 'TypeScript', 'MongoDB', 'Next.js', 'Docker'].map((tech, index) => (
+            {['React', 'Node.js', 'Python', 'AWS', 'TypeScript', 'MongoDB', 'Next.js', 'Docker', 'Kubernetes', 'PostgreSQL', 'Vue.js', 'Go', 'Terraform', 'Vercel', 'AI Integration', 'Kafka'].map((tech, index) => (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, rotateY: -90 }}
