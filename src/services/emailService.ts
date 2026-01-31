@@ -6,28 +6,12 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_AUTO_REPLY_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-// Debug logging
-console.log('🔧 EmailJS Configuration:');
-console.log('Service ID:', EMAILJS_SERVICE_ID);
-console.log('Template ID:', EMAILJS_TEMPLATE_ID);
-console.log('Auto-Reply Template ID:', EMAILJS_AUTO_REPLY_TEMPLATE_ID);
-console.log('Public Key:', EMAILJS_PUBLIC_KEY ? EMAILJS_PUBLIC_KEY.substring(0, 8) + '...' : 'Not found');
-console.log('All env vars:', import.meta.env);
-
 // Check if all required variables are present
 const isConfigured = EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY;
-console.log('Is EmailJS configured?', isConfigured);
 
 // Initialize EmailJS
 if (isConfigured) {
   emailjs.init(EMAILJS_PUBLIC_KEY);
-  console.log('✅ EmailJS initialized successfully');
-} else {
-  console.error('❌ EmailJS configuration missing:', {
-    serviceId: !!EMAILJS_SERVICE_ID,
-    templateId: !!EMAILJS_TEMPLATE_ID,
-    publicKey: !!EMAILJS_PUBLIC_KEY
-  });
 }
 
 export interface ContactFormData {

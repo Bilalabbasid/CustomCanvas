@@ -6,6 +6,182 @@ import { trackPageView } from '../utils/analytics';
 
 // Sample blog post data - later move to database or CMS
 const blogPostsData: Record<string, any> = {
+  'moltbot-personal-ai-assistant': {
+    title: 'Moltbot: A Personal AI Assistant That Goes Beyond Chat',
+    author: 'Code World Team',
+    date: '2026-01-31',
+    readTime: '12 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI', 'Automation', 'Open Source', 'Moltbot', 'Privacy'],
+    content: `
+      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 20px; margin: -20px -20px 40px -20px; border-radius: 12px; text-align: center;">
+        <h1 style="color: white; font-size: 2.5em; margin: 0 0 20px 0;">🤖 Moltbot</h1>
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.3em; margin: 0;">Your Personal AI That Actually Gets Work Done</p>
+      </div>
+
+      <h2>Introduction: AI That Does More Than Talk</h2>
+      <p>Artificial intelligence has evolved rapidly over the last few years, but most AI assistants still share the same limitation: <strong>they talk well, but they do very little</strong>. Moltbot changes that.</p>
+      
+      <p>Originally launched as Clawdbot, <strong>Moltbot is an open-source personal AI assistant designed to take real action</strong> instead of just responding to prompts. It runs locally on your machine, integrates with everyday tools, and behaves more like an intelligent coworker than a chatbot.</p>
+
+      <div style="background: #f7fafc; padding: 30px; border-left: 4px solid #667eea; margin: 30px 0;">
+        <h3 style="margin-top: 0;">💡 Key Insight</h3>
+        <p style="margin-bottom: 0;"><em>"Stop chatting with AI. Start working with it."</em> — This is the philosophy behind Moltbot.</p>
+      </div>
+
+      <h2>What Makes Moltbot Different</h2>
+      
+      <p>Unlike cloud-based AI assistants, Moltbot operates directly on your system. This architectural decision provides several critical advantages:</p>
+
+      <h3>🔒 Full Privacy and Data Control</h3>
+      <p>Your data never leaves your machine. Every conversation, every file, every workflow stays completely under your control. No cloud storage, no third-party access, no privacy concerns.</p>
+
+      <h3>⚡ Real System Integration</h3>
+      <p>Instead of logging into another web interface, you interact with Moltbot through familiar messaging platforms. It can:</p>
+      <ul>
+        <li><strong>Execute tasks</strong> — Run scripts, manage files, automate workflows</li>
+        <li><strong>Maintain long-term memory</strong> — Remember your preferences and past interactions</li>
+        <li><strong>Integrate with tools</strong> — Connect with APIs, databases, and system utilities</li>
+        <li><strong>Learn and adapt</strong> — Understand how you work and optimize accordingly</li>
+      </ul>
+
+      <h3>🧠 Persistent Context</h3>
+      <p>Unlike traditional chatbots that reset after every conversation, Moltbot maintains context across sessions. Over time, it learns your patterns, preferences, and workflows, becoming increasingly effective.</p>
+
+      <div style="background: #fff5f5; padding: 20px; border-radius: 8px; margin: 30px 0;">
+        <h4 style="color: #c53030; margin-top: 0;">⚠️ Important Note</h4>
+        <p style="margin-bottom: 0;">Moltbot is powerful, but it's not designed for casual users. It requires thoughtful configuration and a basic understanding of automation and system permissions.</p>
+      </div>
+
+      <h2>Technical Architecture Overview</h2>
+      
+      <p>For those interested in the technical details, Moltbot consists of three primary layers:</p>
+
+      <h3>1. Communication Layer</h3>
+      <p>Handles incoming messages from chat platforms (Slack, Discord, Telegram, etc.) and routes them to the AI engine. This layer ensures seamless integration with your existing communication tools.</p>
+
+      <h3>2. Reasoning Layer</h3>
+      <p>Processes context, memory, and intent using configurable language models. You can swap models based on your needs — from local models for privacy to powerful cloud models for complex reasoning.</p>
+
+      <h3>3. Execution Layer</h3>
+      <p>Interfaces with the local system, automation scripts, APIs, and tools to perform actions. This is where Moltbot transforms understanding into execution.</p>
+
+      <pre><code>// Example: Moltbot executing a file organization task
+User: "Organize my downloads folder by file type"
+
+Moltbot:
+1. Scans downloads directory
+2. Identifies file types (.pdf, .jpg, .zip, etc.)
+3. Creates organized subdirectories
+4. Moves files to appropriate folders
+5. Reports: "Organized 47 files into 6 categories"
+</code></pre>
+
+      <h2>Why Moltbot Is Gaining Attention</h2>
+      
+      <p>The rapid rise of Moltbot highlights a growing demand for AI tools that are <strong>practical, private, and customizable</strong>. Here's why developers and power users are taking notice:</p>
+
+      <h3>📊 The Shift Toward User-Controlled AI</h3>
+      <p>Developers, founders, and technical teams are moving away from locked platforms and toward systems they can own, modify, and integrate deeply. Moltbot represents this shift from "AI as a service" to "AI as infrastructure."</p>
+
+      <h3>🛠️ Real-World Use Cases</h3>
+      <ul>
+        <li><strong>Development Automation</strong> — Generate boilerplate code, run tests, deploy applications</li>
+        <li><strong>System Administration</strong> — Monitor logs, manage servers, automate backups</li>
+        <li><strong>Content Creation</strong> — Draft documents, generate reports, process data</li>
+        <li><strong>Research & Analysis</strong> — Aggregate information, summarize findings, track trends</li>
+        <li><strong>Personal Productivity</strong> — Schedule tasks, manage emails, organize files</li>
+      </ul>
+
+      <h3>🚀 Open Source and Extensible</h3>
+      <p>Moltbot supports custom skills and integrations. Developers can add new capabilities by connecting scripts, APIs, or services. This makes it suitable for:</p>
+      <ul>
+        <li>Internal tooling and operations automation</li>
+        <li>Experimental AI workflows</li>
+        <li>Custom enterprise integrations</li>
+        <li>Research and development projects</li>
+      </ul>
+
+      <h2>Security Considerations</h2>
+      
+      <p>Because Moltbot operates locally and can access sensitive resources, security is paramount:</p>
+
+      <div style="background: #edf2f7; padding: 25px; border-radius: 8px; margin: 25px 0;">
+        <h4 style="margin-top: 0;">🔐 Security Best Practices</h4>
+        <ul style="margin-bottom: 0;">
+          <li><strong>Scope permissions carefully</strong> — Grant only necessary access rights</li>
+          <li><strong>Audit integrations regularly</strong> — Review what Moltbot can access</li>
+          <li><strong>Use encryption for sensitive data</strong> — Protect credentials and secrets</li>
+          <li><strong>Monitor execution logs</strong> — Track what actions are performed</li>
+          <li><strong>Sandbox experimental features</strong> — Test new capabilities safely</li>
+        </ul>
+      </div>
+
+      <h2>Is Moltbot Right for You?</h2>
+      
+      <p>Moltbot is ideal if you:</p>
+      <ul>
+        <li>✅ Value privacy and data ownership</li>
+        <li>✅ Want AI that takes action, not just suggestions</li>
+        <li>✅ Need deep integration with existing tools</li>
+        <li>✅ Appreciate open-source and customizable solutions</li>
+        <li>✅ Have technical knowledge to configure and secure it</li>
+      </ul>
+
+      <p>Moltbot may not be suitable if you:</p>
+      <ul>
+        <li>❌ Prefer plug-and-play solutions with no setup</li>
+        <li>❌ Don't need system-level automation</li>
+        <li>❌ Are uncomfortable with local AI agents</li>
+        <li>❌ Want a managed, cloud-based service</li>
+      </ul>
+
+      <h2>How CodeWorld.dev Sees Moltbot</h2>
+      
+      <blockquote style="border-left: 4px solid #667eea; padding-left: 20px; margin: 30px 0; font-style: italic; color: #4a5568;">
+        <p>At CodeWorld.dev, we believe AI should be practical, transparent, and owned by the people using it. Moltbot aligns with that belief.</p>
+        
+        <p>It represents a shift from AI as a service to AI as infrastructure. A tool you can build on, trust, and integrate deeply into real systems.</p>
+        
+        <p>Moltbot is not about hype. It's about capability. It shows what happens when AI moves closer to the user and further away from centralized control.</p>
+      </blockquote>
+
+      <h2>Getting Started with Moltbot</h2>
+      
+      <p>Ready to explore Moltbot? Here's how to begin:</p>
+
+      <ol>
+        <li><strong>Visit the GitHub repository</strong> — Review documentation and installation guides</li>
+        <li><strong>Set up your environment</strong> — Install dependencies and configure settings</li>
+        <li><strong>Choose your integrations</strong> — Connect messaging platforms and tools</li>
+        <li><strong>Configure permissions</strong> — Define what Moltbot can access</li>
+        <li><strong>Start small</strong> — Begin with simple tasks and expand gradually</li>
+      </ol>
+
+      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; margin: 40px -20px -20px -20px; border-radius: 12px; text-align: center;">
+        <h3 style="color: white; margin-top: 0;">Ready to Build Your AI Agent?</h3>
+        <p style="color: rgba(255,255,255,0.9); margin-bottom: 25px;">Let CodeWorld.dev help you integrate AI solutions into your workflow.</p>
+        <a href="/#contact" style="display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: transform 0.2s;">Get Started Today</a>
+      </div>
+
+      <h2>Conclusion: The Future of Personal AI</h2>
+      
+      <p>Moltbot represents the next step in personal AI. Not just conversation, but collaboration. Not just answers, but execution. As AI continues to mature, tools like Moltbot show what happens when intelligence meets ownership.</p>
+
+      <p><strong>Key Takeaways:</strong></p>
+      <ul>
+        <li>🤖 Moltbot executes real tasks, not just conversations</li>
+        <li>🔒 Runs locally for complete privacy and control</li>
+        <li>🧠 Maintains long-term memory and context</li>
+        <li>🛠️ Open-source and fully customizable</li>
+        <li>⚡ Integrates with your existing tools and workflows</li>
+      </ul>
+
+      <p>Whether you're a developer looking to automate workflows, a founder building internal tools, or a power user seeking efficiency, Moltbot offers a compelling alternative to traditional AI assistants.</p>
+
+      <p><em>Want to explore AI integration for your business? <a href="/#contact">Contact CodeWorld.dev</a> to discuss custom AI solutions tailored to your needs.</em></p>
+    `,
+  },
   'best-practices-react-performance': {
     title: 'Best Practices for React Performance Optimization',
     author: 'Code World Team',

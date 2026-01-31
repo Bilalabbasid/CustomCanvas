@@ -18,6 +18,17 @@ interface BlogPost {
 // Extended blog posts list
 const allBlogPosts: BlogPost[] = [
   {
+    id: '7',
+    slug: 'moltbot-personal-ai-assistant',
+    title: 'Moltbot: A Personal AI Assistant That Goes Beyond Chat',
+    excerpt: 'Discover Moltbot, an open-source AI assistant that executes real tasks, automates workflows, and runs locally on your machine with full privacy and control.',
+    author: 'Code World Team',
+    date: '2026-01-31',
+    readTime: '12 min read',
+    category: 'AI & Machine Learning',
+    tags: ['AI', 'Automation', 'Open Source', 'Moltbot', 'Privacy'],
+  },
+  {
     id: '1',
     slug: 'best-practices-react-performance',
     title: 'Best Practices for React Performance Optimization',

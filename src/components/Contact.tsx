@@ -6,12 +6,6 @@ import { useToast } from '../hooks/useToast';
 import Toast from './Toast';
 import { trackFormSubmission } from '../utils/analytics';
 
-// Debug: Check environment variables
-console.log('🔍 Environment Variables Check:');
-console.log('- SERVICE_ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
-console.log('- TEMPLATE_ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-console.log('- PUBLIC_KEY:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY ? '✓ Present' : '❌ Missing');
-
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -27,16 +21,12 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('📝 Form submitted with data:', formData);
     setIsSubmitting(true);
     
     try {
-      console.log('🚀 Calling emailService.sendContactEmail...');
       const result = await emailService.sendContactEmail(formData);
-      console.log('📬 Email service result:', result);
       
       if (result.success) {
-        console.log('✅ Email sent successfully');
         trackFormSubmission('Contact Form', true);
         showSuccess('🎉 Message sent successfully! I\'ll get back to you within 24 hours.');
         setFormData({
@@ -45,16 +35,13 @@ const Contact: React.FC = () => {
           message: ''
         });
       } else {
-        console.error('❌ Email failed:', result.message);
         trackFormSubmission('Contact Form', false);
         showError(result.message);
       }
     } catch (error) {
-      console.error('💥 Contact form error:', error);
       showError('Sorry, there was an error sending your message. Please try again or email me directly.');
     } finally {
       setIsSubmitting(false);
-      console.log('🏁 Form submission completed');
     }
   };
 

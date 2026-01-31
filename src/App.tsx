@@ -30,16 +30,20 @@ const HomePage = () => (
   </>
 );
 
+// Component to track page views inside Router
+const PageTracker = () => {
+  usePageTracking();
+  return null;
+};
+
 function App() {
   // Initialize smooth scroll
   useSmoothScroll();
   
-  // Track page views automatically
-  usePageTracking();
-  
   return (
     <ThemeProvider>
       <Router>
+        <PageTracker />
         {/* Scroll position restoration */}
         <ScrollRestoration />
         
