@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDownIcon } from '@heroicons/react/24/outline';
+import { trackButtonClick } from '../utils/analytics';
 
 const Hero: React.FC = () => {
   return (
@@ -52,6 +53,7 @@ const Hero: React.FC = () => {
           >
             <a
               href="#contact"
+              onClick={() => trackButtonClick('Start Your Project', 'Hero Section')}
               className="group relative px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold text-lg overflow-hidden transition-all hover:scale-105"
             >
               <span className="relative z-10">Start Your Project</span>
@@ -60,6 +62,7 @@ const Hero: React.FC = () => {
 
             <a
               href="#projects"
+              onClick={() => trackButtonClick('View Portfolio', 'Hero Section')}
               className="px-8 py-4 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white rounded-full font-semibold text-lg hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all hover:scale-105"
             >
               View Portfolio

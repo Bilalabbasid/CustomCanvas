@@ -1,0 +1,15 @@
+# robots.txt for Code World
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://codeworld.dev/sitemap.xml
+
+# Disallow crawling of API endpoints and admin areas
+Disallow: /api/
+Disallow: /admin/
+
+# Crawl delay (optional - helpful for managing server load)
+Crawl-delay: 1

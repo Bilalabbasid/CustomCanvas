@@ -10,11 +10,28 @@ import {
   ChartBarIcon
 } from '@heroicons/react/24/outline';
 import { staticProjects } from '../data/staticProjects';
+import { trackProjectView } from '../utils/analytics';
+import { useSEO } from '../hooks/useSEO';
 
 const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const project = staticProjects.find(p => p.slug === slug);
+
+  // SEO optimization for project pages
+  useSEO({
+    title: project ? project.title : 'Project Not Found',
+    description: project ? project.fullDescription || project.description : 'Project not found',
+    keywords: project ? project.technologies.join(', ') : '',
+    url: `https://codeworld.dev/projects/${slug}`,
+  });
+
+  // Track project view
+  React.useEffect(() => {
+    if (project) {
+      trackProjectView(project.title, project.slug);
+    }
+  }, [project]);
 
   // Go back to previous page (preserves scroll position)
   const handleGoBack = () => {

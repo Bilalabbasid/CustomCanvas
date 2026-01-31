@@ -9,9 +9,13 @@ import Partners from './components/Partners';
 import LeadGeneration from './components/LeadGeneration';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Blog from './components/Blog';
+import BlogList from './components/BlogList';
+import BlogPost from './components/BlogPost';
 import { ThemeProvider } from './context/ThemeContext';
 import { ScrollRestoration } from './hooks/useScrollRestoration';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
+import { usePageTracking } from './hooks/usePageTracking';
 
 const HomePage = () => (
   <>
@@ -20,6 +24,7 @@ const HomePage = () => (
     <Services />
     <Projects />
     <Partners />
+    <Blog />
     <LeadGeneration />
     <Contact />
   </>
@@ -28,6 +33,9 @@ const HomePage = () => (
 function App() {
   // Initialize smooth scroll
   useSmoothScroll();
+  
+  // Track page views automatically
+  usePageTracking();
   
   return (
     <ThemeProvider>
@@ -50,6 +58,8 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/projects/:slug" element={<ProjectDetail />} />
+              <Route path="/blog" element={<BlogList />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
             </Routes>
           </main>
           

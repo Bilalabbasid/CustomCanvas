@@ -4,6 +4,7 @@ import { EnvelopeIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline';
 import { emailService } from '../services/emailService';
 import { useToast } from '../hooks/useToast';
 import Toast from './Toast';
+import { trackFormSubmission } from '../utils/analytics';
 
 // Debug: Check environment variables
 console.log('🔍 Environment Variables Check:');
@@ -36,6 +37,7 @@ const Contact: React.FC = () => {
       
       if (result.success) {
         console.log('✅ Email sent successfully');
+        trackFormSubmission('Contact Form', true);
         showSuccess('🎉 Message sent successfully! I\'ll get back to you within 24 hours.');
         setFormData({
           name: '',
@@ -44,6 +46,7 @@ const Contact: React.FC = () => {
         });
       } else {
         console.error('❌ Email failed:', result.message);
+        trackFormSubmission('Contact Form', false);
         showError(result.message);
       }
     } catch (error) {

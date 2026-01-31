@@ -1,0 +1,25 @@
+<!-- Google Analytics Setup Instructions -->
+
+<!-- 
+  STEP 1: Create Google Analytics Account
+  1. Go to https://analytics.google.com/
+  2. Click "Start measuring"
+  3. Create an account and property
+  4. Get your Measurement ID (format: G-XXXXXXXXXX)
+
+  STEP 2: Replace G-XXXXXXXXXX below with your actual Measurement ID
+
+  STEP 3: Copy this entire block and paste it in index.html in the <head> section (around line 50, after fonts)
+-->
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    page_path: window.location.pathname,
+  });
+</script>
+<!-- End Google Analytics -->
