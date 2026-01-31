@@ -63,7 +63,13 @@ const Header: React.FC = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex-shrink-0 cursor-pointer"
-            onClick={() => navigate('/')}
+            onClick={() => {
+              if (location.pathname !== '/') {
+                navigate('/');
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
           >
             <span className="text-2xl font-display font-extrabold tracking-tight" aria-label="Code World - Home">
               <span className="text-gray-900 dark:text-white">Code </span>
