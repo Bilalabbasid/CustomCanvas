@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline';
 import { emailService } from '../services/emailService';
+import { useToast } from '../hooks/useToast';
+import Toast from './Toast';
+import { trackFormSubmission } from '../utils/analytics';
 
 const LeadGeneration: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +15,7 @@ const LeadGeneration: React.FC = () => {
     budget: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast, showSuccess, showError, hideToast } = useToast();
 
   const budgetOptions = [
     'Under $10k',
@@ -27,8 +31,6 @@ const LeadGeneration: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      console.log('🚀 Submitting lead generation form:', formData);
-      
       // Use emailService to send the proposal request
       const result = await emailService.sendContactEmail({
         name: formData.name,
@@ -50,7 +52,8 @@ Please send me a detailed proposal for this project including timeline, delivera
       });
 
       if (result.success) {
-        alert('Thank you! We\'ll send you a detailed proposal within 24 hours.');
+        trackFormSubmission('Lead Generation Form', true);
+        showSuccess('🎉 Thank you! We\'ll send you a detailed proposal within 24 hours.');
         setFormData({
           name: '',
           email: '',
@@ -59,11 +62,11 @@ Please send me a detailed proposal for this project including timeline, delivera
           budget: ''
         });
       } else {
-        throw new Error(result.message || 'Failed to submit proposal request');
+        trackFormSubmission('Lead Generation Form', false);
+        showError(result.message);
       }
     } catch (error) {
-      console.error('Lead form error:', error);
-      alert('Sorry, there was an error submitting your request. Please try again.');
+      showError('Sorry, there was an error submitting your request. Please try again or contact us directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -77,7 +80,15 @@ Please send me a detailed proposal for this project including timeline, delivera
   };
 
   return (
-    <section className="py-24 bg-white dark:bg-gray-800">
+    <>
+      <Toast
+        message={toast.message}
+        type={toast.type}
+        isVisible={toast.isVisible}
+        onClose={hideToast}
+        duration={6000}
+      />
+      <section className="py-24 bg-white dark:bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -213,6 +224,7 @@ Please send me a detailed proposal for this project including timeline, delivera
         </motion.div>
       </div>
     </section>
+    </>
   );
 };
 
