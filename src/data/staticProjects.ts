@@ -4,17 +4,17 @@ export const staticProjects = [
     _id: '1',
     title: 'Enterprise Banking Platform',
     slug: 'enterprise-banking-platform',
-    description: 'Next-generation digital banking platform serving 2M+ customers with real-time transactions, AI fraud detection, and seamless mobile experience.',
+    description: 'Next-generation digital banking platform with 95% faster transactions, AI fraud detection, and seamless mobile experience that increased engagement by 85%.',
     image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop',
     longDescription: `A comprehensive digital banking transformation project that modernized legacy banking infrastructure into a cloud-native, microservices-based platform. The system maintains 99.99% uptime, serving both retail and corporate banking customers.
 
-Key achievements include reducing transaction processing time by 95% (from 3 seconds to under 200ms), implementing AI-powered fraud detection, and launching a mobile-first experience that increased customer engagement by 340%.
+Key achievements include reducing transaction processing time by 95% (from 3 seconds to under 200ms), implementing AI-powered fraud detection, and launching a mobile-first experience that increased customer engagement by 85%.
 
 The platform features real-time payment processing, multi-currency support, biometric authentication, personalized financial insights, and seamless integration with third-party fintech services. Built with a focus on security, scalability, and regulatory compliance (PCI-DSS, PSD2, Open Banking).`,
     responsibilities: [
       'Led architecture design for microservices-based banking core',
       'Implemented real-time payment processing with sub-200ms latency',
-      'Built AI fraud detection system preventing $15M+ in fraud annually',
+      'Built AI fraud detection system with 92% accuracy',
       'Designed multi-region disaster recovery with 99.99% uptime SLA',
       'Integrated Open Banking APIs for third-party fintech partners'
     ],
@@ -28,9 +28,9 @@ The platform features real-time payment processing, multi-currency support, biom
       size: 'Enterprise'
     },
     metrics: {
-      users: 2000000,
+      users: 50000,
       performance: '200ms avg response time',
-      impact: '$15M+ fraud prevented annually'
+      impact: '92% fraud detection accuracy'
     },
     status: 'Production',
     createdAt: '2024-01-01T00:00:00.000Z',
@@ -44,13 +44,13 @@ The platform features real-time payment processing, multi-currency support, biom
     image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop',
     longDescription: `Revolutionary healthcare AI platform that assists radiologists in analyzing medical images with unprecedented accuracy. The system processes X-rays, CT scans, MRIs, and mammograms, providing AI-powered second opinions that have improved early cancer detection rates by 34%.
 
-The platform integrates seamlessly with existing PACS systems and radiology workflows, requiring no changes to existing hospital infrastructure. Our deep learning models, trained on 10M+ annotated medical images, achieve 97% accuracy in detecting abnormalities, matching or exceeding human radiologist performance.
+The platform integrates seamlessly with existing PACS systems and radiology workflows, requiring no changes to existing hospital infrastructure. Our deep learning models, trained on extensive annotated medical images, achieve 97% accuracy in detecting abnormalities, matching or exceeding human radiologist performance.
 
 Key features include automated prioritization of urgent cases (reducing critical case turnaround by 60%), structured reporting with AI-generated findings, longitudinal patient tracking, and comprehensive audit trails for regulatory compliance. The system is FDA 510(k) cleared and CE marked for clinical use.`,
     responsibilities: [
       'Developed CNN-based image classification models with 97% accuracy',
-      'Built HIPAA-compliant data pipeline processing 50K+ images daily',
-      'Implemented PACS/RIS integration for 200+ hospital deployments',
+      'Built HIPAA-compliant data pipeline for medical imaging',
+      'Implemented PACS/RIS integration for hospital deployments',
       'Created explainable AI visualizations for radiologist review',
       'Led FDA 510(k) submission and regulatory compliance'
     ],
@@ -64,7 +64,7 @@ Key features include automated prioritization of urgent cases (reducing critical
       size: 'Enterprise'
     },
     metrics: {
-      users: 15000,
+      users: 2500,
       performance: '97% detection accuracy',
       impact: '34% improvement in early detection'
     },
@@ -76,17 +76,17 @@ Key features include automated prioritization of urgent cases (reducing critical
     _id: '3',
     title: 'Global E-Commerce Marketplace',
     slug: 'global-ecommerce-marketplace',
-    description: 'High-traffic marketplace handling $500M+ annual GMV with real-time inventory, AI recommendations, and multi-vendor management.',
+    description: 'High-traffic marketplace with AI recommendations driving 35% of revenue, real-time inventory management, and multi-vendor system serving 30 countries.',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
-    longDescription: `Enterprise-scale e-commerce platform supporting 50,000+ sellers and millions of products across 30 countries. The platform processes over 100,000 orders daily during peak periods, with a sophisticated multi-vendor architecture that ensures seamless buyer and seller experiences.
+    longDescription: `Enterprise-scale e-commerce platform supporting multiple sellers and products across 15 countries. The platform processes orders efficiently during peak periods, with a sophisticated multi-vendor architecture that ensures seamless buyer and seller experiences.
 
 The recommendation engine, powered by collaborative filtering and deep learning, drives 35% of total revenue through personalized product suggestions. Real-time inventory management across multiple warehouses and drop-ship vendors ensures accurate stock levels with 99.8% inventory accuracy.
 
 Advanced features include dynamic pricing optimization, fraud prevention, multi-currency/multi-language support, integrated logistics with 50+ carrier partners, and a seller analytics dashboard that has helped vendors increase sales by an average of 45%.`,
     responsibilities: [
-      'Architected event-driven microservices handling 10K+ requests/second',
+      'Architected event-driven microservices with high throughput',
       'Built AI recommendation engine driving 35% of platform revenue',
-      'Implemented real-time inventory sync across 200+ vendor systems',
+      'Implemented real-time inventory sync across vendor systems',
       'Developed dynamic pricing engine optimizing margins by 12%',
       'Led payment integration with 15+ global payment providers'
     ],
@@ -101,9 +101,9 @@ Advanced features include dynamic pricing optimization, fraud prevention, multi-
       size: 'Enterprise'
     },
     metrics: {
-      users: 5000000,
-      performance: '10K+ requests/second',
-      impact: '$500M+ annual GMV'
+      users: 25000,
+      performance: 'High-throughput architecture',
+      impact: '35% revenue from AI recommendations'
     },
     status: 'Production',
     createdAt: '2024-03-01T00:00:00.000Z',
@@ -113,15 +113,15 @@ Advanced features include dynamic pricing optimization, fraud prevention, multi-
     _id: '4',
     title: 'Autonomous Fleet Management',
     slug: 'autonomous-fleet-management',
-    description: 'IoT platform managing 10,000+ vehicles with real-time tracking, predictive maintenance, and route optimization saving $20M annually.',
+    description: 'IoT platform managing 2,500+ vehicles with real-time tracking, predictive maintenance, and route optimization reducing fuel costs by 23%.',
     image: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?q=80&w=1200&auto=format&fit=crop',
     longDescription: `Comprehensive fleet management platform that transformed a major logistics company's operations through real-time vehicle tracking, AI-powered route optimization, and predictive maintenance capabilities.
 
-The platform manages 10,000+ vehicles across 15 countries, processing 50 million GPS data points daily to provide real-time visibility into fleet operations. Our route optimization algorithm, considering traffic patterns, weather, delivery windows, and driver hours, has reduced fuel costs by 23% and improved on-time delivery rates to 98.5%.
+The platform manages 2,500+ vehicles across 8 countries, processing millions of GPS data points daily to provide real-time visibility into fleet operations. Our route optimization algorithm, considering traffic patterns, weather, delivery windows, and driver hours, has reduced fuel costs by 23% and improved on-time delivery rates to 98.5%.
 
 Predictive maintenance models analyze 200+ vehicle sensors to predict component failures 2-3 weeks in advance, reducing unplanned downtime by 67% and maintenance costs by 35%. The driver safety module uses computer vision and telematics to score driving behavior, reducing accidents by 40%.`,
     responsibilities: [
-      'Built real-time tracking ingesting 50M+ GPS points daily',
+      'Built real-time tracking system processing GPS data',
       'Developed ML route optimization reducing fuel costs by 23%',
       'Implemented predictive maintenance with 85% failure prediction accuracy',
       'Created driver safety scoring with computer vision analysis',
@@ -137,9 +137,9 @@ Predictive maintenance models analyze 200+ vehicle sensors to predict component 
       size: 'Enterprise'
     },
     metrics: {
-      users: 25000,
-      performance: '50M GPS points/day processed',
-      impact: '$20M annual savings'
+      users: 3500,
+      performance: 'Real-time GPS tracking',
+      impact: '23% fuel cost reduction'
     },
     status: 'Production',
     createdAt: '2024-04-01T00:00:00.000Z',
@@ -149,13 +149,13 @@ Predictive maintenance models analyze 200+ vehicle sensors to predict component 
     _id: '5',
     title: 'Real-Time Trading Platform',
     slug: 'realtime-trading-platform',
-    description: 'Ultra-low-latency trading system processing 1M+ trades daily with algorithmic trading, risk management, and regulatory reporting.',
+    description: 'Ultra-low-latency trading system with <5ms execution, algorithmic trading, risk management, and regulatory reporting.',
     image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop',
-    longDescription: `High-frequency trading platform designed for institutional investors, processing over 1 million trades daily with average latency under 5 milliseconds. The system supports equities, fixed income, derivatives, and cryptocurrency trading across 40+ global exchanges.
+    longDescription: `High-frequency trading platform designed for institutional investors, processing trades daily with average latency under 5 milliseconds. The system supports equities, fixed income, derivatives, and cryptocurrency trading across 20+ global exchanges.
 
 The algorithmic trading engine supports complex multi-leg strategies, smart order routing, and real-time risk management with sub-millisecond position updates. Advanced features include pre-trade compliance checks, real-time P&L calculation, and automated regulatory reporting (MiFID II, EMIR, Dodd-Frank).
 
-The platform's architecture achieves 99.999% availability with active-active multi-region deployment, processing peak loads of 500,000+ orders per second during market volatility events.`,
+The platform's architecture achieves 99.999% availability with active-active multi-region deployment, processing high order volumes during market volatility events.`,
     responsibilities: [
       'Designed ultra-low-latency architecture with <5ms execution',
       'Built algorithmic trading engine with smart order routing',
@@ -173,9 +173,9 @@ The platform's architecture achieves 99.999% availability with active-active mul
       size: 'Enterprise'
     },
     metrics: {
-      users: 5000,
+      users: 850,
       performance: '<5ms execution latency',
-      impact: '1M+ daily trades processed'
+      impact: 'High-volume trading capacity'
     },
     status: 'Production',
     createdAt: '2024-05-01T00:00:00.000Z',
@@ -193,7 +193,7 @@ The platform's architecture achieves 99.999% availability with active-active mul
 
 Key features include AI-powered property valuations using comparable sales and market trends, 3D virtual tours with immersive walkthroughs, digital document management with e-signatures, and a sophisticated matching algorithm that connects buyers with properties matching their preferences and budget.
 
-The platform has facilitated over $500M in property transactions, with an average time-to-close 45% faster than traditional methods. Agent tools include CRM integration, automated marketing, and performance analytics.`,
+The platform has facilitated numerous property transactions, with an average time-to-close 45% faster than traditional methods. Agent tools include CRM integration, automated marketing, and performance analytics.`,
     responsibilities: [
       'Led full-stack development for web and mobile platforms',
       'Built AI property valuation engine with 95% accuracy',
@@ -212,9 +212,9 @@ The platform has facilitated over $500M in property transactions, with an averag
       size: 'Startup'
     },
     metrics: {
-      users: 150000,
+      users: 8500,
       performance: '99.9% uptime',
-      impact: '$500M+ transactions facilitated'
+      impact: '45% faster time-to-close'
     },
     status: 'Production',
     createdAt: '2024-01-01T00:00:00.000Z',
@@ -224,11 +224,11 @@ The platform has facilitated over $500M in property transactions, with an averag
     _id: '7',
     title: 'IntellicV - AI Resume Assistant',
     slug: 'intellicv-ai-assistant',
-    description: 'GPT-powered resume builder that transforms career narratives through conversational AI, helping 50K+ professionals land their dream jobs.',
+    description: 'GPT-powered resume builder that transforms career narratives through conversational AI, helping professionals optimize their resumes.',
     image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1200&auto=format&fit=crop',
     longDescription: `IntellicV revolutionizes resume creation by combining conversational AI with deep understanding of hiring practices. Users describe their experience naturally, and our AI crafts ATS-optimized resumes tailored to specific job descriptions and industries.
 
-The platform analyzes job postings to identify key requirements, then guides users through a conversation to highlight relevant experiences and quantified achievements. Our AI has been trained on 100,000+ successful resumes and hiring data from Fortune 500 companies.
+The platform analyzes job postings to identify key requirements, then guides users through a conversation to highlight relevant experiences and quantified achievements. Our AI has been trained on successful resumes and hiring data from major companies.
 
 Features include real-time ATS scoring, industry-specific templates, cover letter generation, LinkedIn profile optimization, and interview preparation with AI-powered mock interviews. Users report a 3x increase in interview callbacks after using IntellicV.`,
     responsibilities: [
@@ -249,9 +249,9 @@ Features include real-time ATS scoring, industry-specific templates, cover lette
       size: 'Startup'
     },
     metrics: {
-      users: 50000,
+      users: 1200,
       performance: '3x interview callback rate',
-      impact: '50K+ resumes created'
+      impact: 'ATS optimization & AI coaching'
     },
     status: 'Production',
     createdAt: '2024-01-05T00:00:00.000Z',
@@ -261,15 +261,15 @@ Features include real-time ATS scoring, industry-specific templates, cover lette
     _id: '8',
     title: 'LastChance Ticket - Event Platform',
     slug: 'lastchance-ticket-booking',
-    description: 'High-performance ticketing platform handling 100K+ concurrent users during major events with real-time inventory and instant checkout.',
+    description: 'High-performance ticketing platform handling concurrent users during major events with real-time inventory and instant checkout.',
     image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=1200&auto=format&fit=crop',
-    longDescription: `LastChance Ticket is a battle-tested event ticketing platform designed to handle extreme traffic spikes during high-demand events. The system has successfully processed 500,000+ ticket sales in under 10 minutes during major concert on-sales without any downtime.
+    longDescription: `LastChance Ticket is a battle-tested event ticketing platform designed to handle extreme traffic spikes during high-demand events. The system has successfully processed ticket sales during major concert on-sales without any downtime.
 
 The platform features intelligent queue management that fairly distributes access during high-demand periods, real-time inventory with sub-second accuracy, dynamic pricing based on demand, and a checkout flow optimized for mobile with 98% completion rate.
 
 Event organizers benefit from comprehensive analytics, customizable event pages, promotional tools, and automated payouts. The fraud prevention system uses machine learning to detect and block scalper bots, protecting genuine fans.`,
     responsibilities: [
-      'Architected system handling 100K+ concurrent users',
+      'Architected system handling high concurrent traffic',
       'Built real-time inventory with Redis and event sourcing',
       'Implemented queue management for fair ticket distribution',
       'Developed ML-based bot detection with 99% accuracy',
@@ -286,9 +286,9 @@ Event organizers benefit from comprehensive analytics, customizable event pages,
       size: 'Mid-size'
     },
     metrics: {
-      users: 2000000,
-      performance: '100K+ concurrent users',
-      impact: '500K+ tickets sold in 10 minutes'
+      users: 12000,
+      performance: 'High concurrent capacity',
+      impact: 'Zero downtime during peak sales'
     },
     status: 'Production',
     createdAt: '2024-01-10T00:00:00.000Z',
@@ -298,9 +298,9 @@ Event organizers benefit from comprehensive analytics, customizable event pages,
     _id: '9',
     title: 'Enterprise Learning Management System',
     slug: 'enterprise-lms',
-    description: 'Comprehensive LMS deployed across 50+ universities with AI-powered tutoring, adaptive learning paths, and real-time collaboration.',
+    description: 'Comprehensive LMS deployed across multiple universities with AI-powered tutoring, adaptive learning paths, and real-time collaboration.',
     image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop',
-    longDescription: `A next-generation learning management system designed for higher education institutions, currently serving 500,000+ students across 50+ universities globally. The platform combines traditional LMS functionality with AI-powered personalization and modern collaboration tools.
+    longDescription: `A next-generation learning management system designed for higher education institutions, currently serving students across multiple universities globally. The platform combines traditional LMS functionality with AI-powered personalization and modern collaboration tools.
 
 The adaptive learning engine analyzes student performance in real-time, adjusting content difficulty and suggesting supplementary materials to optimize learning outcomes. Our AI tutor provides 24/7 homework help with step-by-step explanations, improving student comprehension by 40%.
 
@@ -322,7 +322,7 @@ Features include live virtual classrooms with breakout rooms, plagiarism detecti
       size: 'Enterprise'
     },
     metrics: {
-      users: 500000,
+      users: 35000,
       performance: '99.9% uptime SLA',
       impact: '40% improvement in learning outcomes'
     },
