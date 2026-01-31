@@ -664,17 +664,6 @@ const BlogPost = () => {
           </button>
         </motion.header>
 
-        {/* Featured Image Placeholder */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="mb-12 rounded-xl overflow-hidden"
-        >
-          <div className="h-96 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-            <span className="text-9xl">📝</span>
-          </div>
-        </motion.div>
-
         {/* Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
