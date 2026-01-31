@@ -33,16 +33,8 @@ export const emailService = {
    * Send contact form email using EmailJS
    */
   async sendContactEmail(formData: ContactFormData): Promise<EmailResponse> {
-    console.log('📧 Attempting to send email with data:', formData);
-    
     // Check if EmailJS is properly configured
     if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
-      console.error('❌ EmailJS not configured properly');
-      console.error('Missing:', {
-        serviceId: !EMAILJS_SERVICE_ID,
-        templateId: !EMAILJS_TEMPLATE_ID,
-        publicKey: !EMAILJS_PUBLIC_KEY
-      });
       return {
         success: false,
         message: 'Email service not configured. Please set up EmailJS credentials.'
@@ -79,22 +71,16 @@ export const emailService = {
         form_type: 'Contact Form',
       };
 
-      console.log('📤 Sending email with params:', templateParams);
-
-      console.log('📤 Sending contact email to admin...');
       const response = await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         templateParams
       );
 
-      console.log('✅ Contact Email Response:', response);
-
       if (response.status === 200) {
         // Send auto-reply if template is configured
         if (EMAILJS_AUTO_REPLY_TEMPLATE_ID) {
           try {
-            console.log('📤 Sending auto-reply to user...');
             const autoReplyParams = {
               // Standard EmailJS auto-reply parameters
               to_email: formData.email,           // Send TO the user
@@ -109,20 +95,14 @@ export const emailService = {
               timestamp: new Date().toLocaleString(),
             };
             
-            console.log('📤 Auto-reply params:', autoReplyParams);
-            
             const autoReplyResponse = await emailjs.send(
               EMAILJS_SERVICE_ID,
               EMAILJS_AUTO_REPLY_TEMPLATE_ID,
               autoReplyParams
             );
-            
-            console.log('✅ Auto-reply sent:', autoReplyResponse);
           } catch (autoReplyError) {
-            console.error('❌ Auto-reply failed (but main email was sent):', autoReplyError);
+            // Auto-reply failed but main email was sent
           }
-        } else {
-          console.warn('⚠️ Auto-reply template not configured');
         }
         
         return {
@@ -133,8 +113,6 @@ export const emailService = {
         throw new Error('Failed to send email');
       }
     } catch (error) {
-      console.error('❌ EmailJS Error:', error);
-      
       // Check if it's a template not found error
       if (error instanceof Error && error.message.includes('template ID not found')) {
         return {
@@ -169,7 +147,6 @@ export const emailService = {
         autoReplyParams
       );
     } catch (error) {
-      console.error('Auto-reply failed:', error);
       // Don't throw error for auto-reply failure
     }
   }

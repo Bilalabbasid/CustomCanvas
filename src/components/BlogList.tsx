@@ -18,6 +18,28 @@ interface BlogPost {
 // Extended blog posts list
 const allBlogPosts: BlogPost[] = [
   {
+    id: '9',
+    slug: 'web3-blockchain-enterprise-integration',
+    title: 'Web3 and Blockchain Integration in Enterprise Applications',
+    excerpt: 'Practical approaches to integrating blockchain technology and Web3 capabilities into existing enterprise systems for transparency, security, and decentralized workflows.',
+    author: 'Code World Team',
+    date: '2026-02-02',
+    readTime: '14 min read',
+    category: 'Blockchain & Web3',
+    tags: ['Web3', 'Blockchain', 'Enterprise', 'Smart Contracts', 'Decentralization'],
+  },
+  {
+    id: '8',
+    slug: 'devops-automation-ci-cd-best-practices',
+    title: 'DevOps Automation: CI/CD Pipelines That Actually Work',
+    excerpt: 'Build reliable, fast, and secure CI/CD pipelines using modern DevOps tools. Learn from real world implementations and avoid common pitfalls.',
+    author: 'Code World Team',
+    date: '2026-02-01',
+    readTime: '11 min read',
+    category: 'Cloud & DevOps',
+    tags: ['DevOps', 'CI/CD', 'Automation', 'Docker', 'Kubernetes'],
+  },
+  {
     id: '7',
     slug: 'moltbot-personal-ai-assistant',
     title: 'Moltbot: A Personal AI Assistant That Goes Beyond Chat',
@@ -96,7 +118,7 @@ const allBlogPosts: BlogPost[] = [
   },
 ];
 
-const categories = ['All', 'Web Development', 'AI & Machine Learning', 'Cloud & DevOps', 'Mobile Development', 'Architecture'];
+const categories = ['All', 'Web Development', 'AI & Machine Learning', 'Cloud & DevOps', 'Blockchain & Web3', 'Mobile Development', 'Architecture'];
 
 const BlogList = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -181,7 +203,11 @@ const BlogList = () => {
               {/* Blog Image */}
               <div className="h-48 overflow-hidden">
                 <img 
-                  src={post.slug === 'moltbot-personal-ai-assistant' 
+                  src={post.slug === 'web3-blockchain-enterprise-integration'
+                    ? 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'devops-automation-ci-cd-best-practices'
+                    ? 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'moltbot-personal-ai-assistant' 
                     ? 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop'
                     : post.slug === 'best-practices-react-performance'
                     ? 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1200&auto=format&fit=crop'
