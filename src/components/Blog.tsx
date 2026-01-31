@@ -98,9 +98,20 @@ const Blog = () => {
               transition={{ delay: index * 0.1 }}
               className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              {/* Image placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-                <span className="text-6xl">📝</span>
+              {/* Blog Image */}
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={post.slug === 'moltbot-personal-ai-assistant' 
+                    ? 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'best-practices-react-performance'
+                    ? 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'ai-integration-modern-apps'
+                    ? 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop'
+                    : 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop'
+                  }
+                  alt={post.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
               <div className="p-6">
@@ -123,10 +134,6 @@ const Blog = () => {
 
                 {/* Meta information */}
                 <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                  </div>
                   <div className="flex items-center gap-1">
                     <Clock className="w-4 h-4" />
                     <span>{post.readTime}</span>

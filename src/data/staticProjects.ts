@@ -6,9 +6,9 @@ export const staticProjects = [
     slug: 'enterprise-banking-platform',
     description: 'Next-generation digital banking platform serving 2M+ customers with real-time transactions, AI fraud detection, and seamless mobile experience.',
     image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop',
-    longDescription: `A comprehensive digital banking transformation project that modernized legacy banking infrastructure into a cloud-native, microservices-based platform. The system handles over 5 million daily transactions with 99.99% uptime, serving both retail and corporate banking customers.
+    longDescription: `A comprehensive digital banking transformation project that modernized legacy banking infrastructure into a cloud-native, microservices-based platform. The system maintains 99.99% uptime, serving both retail and corporate banking customers.
 
-Key achievements include reducing transaction processing time from 3 seconds to under 200ms, implementing AI-powered fraud detection that prevented $15M+ in fraudulent transactions in the first year, and launching a mobile-first experience that increased customer engagement by 340%.
+Key achievements include reducing transaction processing time by 95% (from 3 seconds to under 200ms), implementing AI-powered fraud detection, and launching a mobile-first experience that increased customer engagement by 340%.
 
 The platform features real-time payment processing, multi-currency support, biometric authentication, personalized financial insights, and seamless integration with third-party fintech services. Built with a focus on security, scalability, and regulatory compliance (PCI-DSS, PSD2, Open Banking).`,
     responsibilities: [

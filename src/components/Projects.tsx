@@ -46,13 +46,6 @@ const Projects: React.FC = () => {
       ref={sectionRef}
       className="py-32 bg-gray-50 dark:bg-gray-950 overflow-hidden"
     >
-      {/* Background text */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden opacity-[0.02] dark:opacity-[0.03] pointer-events-none">
-        <span className="text-[20vw] font-display font-bold whitespace-nowrap text-gray-900 dark:text-white">
-          PORTFOLIO
-        </span>
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-32">
