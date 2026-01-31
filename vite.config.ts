@@ -7,16 +7,26 @@ export default defineConfig({
   base: '/',
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: false, // Disable sourcemaps in production for smaller files
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.logs in production
+        drop_debugger: true
+      }
+    },
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react']
+          ui: ['framer-motion'],
+          icons: ['lucide-react', '@heroicons/react'],
+          emailjs: ['@emailjs/browser']
         }
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000
   },
   server: {
     proxy: {
@@ -27,6 +37,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    include: ['react', 'react-dom', 'react-router-dom'],
   },
 });

@@ -1,21 +1,31 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Projects from './components/Projects';
-import ProjectDetail from './components/ProjectDetail';
-import Partners from './components/Partners';
-import LeadGeneration from './components/LeadGeneration';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Blog from './components/Blog';
-import BlogList from './components/BlogList';
-import BlogPost from './components/BlogPost';
 import { ThemeProvider } from './context/ThemeContext';
 import { ScrollRestoration } from './hooks/useScrollRestoration';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
 import { usePageTracking } from './hooks/usePageTracking';
+
+// Lazy load components for better performance
+const Header = lazy(() => import('./components/Header'));
+const Hero = lazy(() => import('./components/Hero'));
+const About = lazy(() => import('./components/About'));
+const Services = lazy(() => import('./components/Services'));
+const Projects = lazy(() => import('./components/Projects'));
+const ProjectDetail = lazy(() => import('./components/ProjectDetail'));
+const Partners = lazy(() => import('./components/Partners'));
+const LeadGeneration = lazy(() => import('./components/LeadGeneration'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
+const Blog = lazy(() => import('./components/Blog'));
+const BlogList = lazy(() => import('./components/BlogList'));
+const BlogPost = lazy(() => import('./components/BlogPost'));
+
+// Loading fallback
+const LoadingFallback = () => (
+  <div className="flex items-center justify-center min-h-screen bg-white dark:bg-gray-900">
+    <div className="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 const HomePage = () => (
   <>
@@ -47,7 +57,8 @@ function App() {
         {/* Scroll position restoration */}
         <ScrollRestoration />
         
-        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+        <Suspense fallback={<LoadingFallback />}>
+          <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
           {/* Skip to main content link for accessibility */}
           <a 
             href="#main-content" 
@@ -68,7 +79,8 @@ function App() {
           </main>
           
           <Footer />
-        </div>
+          </div>
+        </Suspense>
       </Router>
     </ThemeProvider>
   );
