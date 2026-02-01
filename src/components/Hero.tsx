@@ -5,7 +5,7 @@ import { trackButtonClick } from '../utils/analytics';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-green-50 dark:bg-gray-900 pt-20">
+    <section className="relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden bg-green-50 dark:bg-gray-900 pt-20 pb-16">
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
