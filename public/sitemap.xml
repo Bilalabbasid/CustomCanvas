@@ -47,12 +47,75 @@
   <!-- Blog (if/when added) -->
   <url>
     <loc>https://codeworld.dev/blog</loc>
-    <lastmod>2026-02-02</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Blog Posts -->
+  <url>
+    <loc>https://codeworld.dev/blog/nvidia-ai-chip-competition-analysis</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://codeworld.dev/blog/openai-xai-anthropic-ai-race</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://codeworld.dev/blog/nasa-genesis-mission-space-exploration</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://codeworld.dev/blog/ai-market-trillion-dollar-future-2030</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://codeworld.dev/blog/ai-automation-business-transformation</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://codeworld.dev/blog/website-business-growth-catalyst</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://codeworld.dev/blog/moltbot-data-privacy-concerns</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://codeworld.dev/blog/moltbot-integration-security-risks</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://codeworld.dev/blog/moltbot-security-risks-local-ai</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <url>
     <loc>https://codeworld.dev/blog/web3-blockchain-enterprise-integration</loc>
     <lastmod>2026-02-02</lastmod>

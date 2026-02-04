@@ -19,40 +19,40 @@ interface BlogPost {
 // Sample blog posts - later move to database or CMS
 const blogPosts: BlogPost[] = [
   {
-    id: '9',
-    slug: 'web3-blockchain-enterprise-integration',
-    title: 'Web3 and Blockchain Integration in Enterprise Applications',
-    excerpt: 'Practical approaches to integrating blockchain technology and Web3 capabilities into existing enterprise systems.',
+    id: '18',
+    slug: 'nvidia-ai-chip-competition-analysis',
+    title: 'Nvidia vs The Competition: The Battle for AI Chip Supremacy',
+    excerpt: 'As AI demand explodes, Nvidia faces fierce competition. Explore the battle for AI hardware dominance.',
     content: '',
     author: 'Code World Team',
-    date: '2026-02-02',
+    date: '2026-02-05',
     readTime: '14 min read',
-    category: 'Blockchain & Web3',
-    tags: ['Web3', 'Blockchain', 'Enterprise', 'Smart Contracts'],
-  },
-  {
-    id: '8',
-    slug: 'devops-automation-ci-cd-best-practices',
-    title: 'DevOps Automation: CI/CD Pipelines That Actually Work',
-    excerpt: 'Build reliable, fast, and secure CI/CD pipelines using modern DevOps tools and best practices.',
-    content: '',
-    author: 'Code World Team',
-    date: '2026-02-01',
-    readTime: '11 min read',
-    category: 'Cloud & DevOps',
-    tags: ['DevOps', 'CI/CD', 'Automation', 'Docker'],
-  },
-  {
-    id: '7',
-    slug: 'moltbot-personal-ai-assistant',
-    title: 'Moltbot: A Personal AI Assistant That Goes Beyond Chat',
-    excerpt: 'Discover Moltbot, an open-source AI assistant that executes real tasks and runs locally on your machine.',
-    content: '',
-    author: 'Code World Team',
-    date: '2026-01-31',
-    readTime: '12 min read',
     category: 'AI & Machine Learning',
-    tags: ['AI', 'Automation', 'Open Source', 'Moltbot'],
+    tags: ['Nvidia', 'AI Hardware', 'Competition', 'GPU'],
+  },
+  {
+    id: '17',
+    slug: 'openai-xai-anthropic-ai-race',
+    title: 'OpenAI vs xAI vs Anthropic: The Race to Define AI Future',
+    excerpt: 'Compare the fierce competition between OpenAI, xAI, Anthropic, and other AI giants shaping the future.',
+    content: '',
+    author: 'Code World Team',
+    date: '2026-02-05',
+    readTime: '15 min read',
+    category: 'AI & Machine Learning',
+    tags: ['OpenAI', 'xAI', 'Anthropic', 'AI Competition'],
+  },
+  {
+    id: '16',
+    slug: 'nasa-genesis-mission-space-exploration',
+    title: 'NASA Genesis Mission: Pioneering the Future of Space Exploration',
+    excerpt: 'Discover NASA Genesis mission bold leap in space exploration and cosmic origins research.',
+    content: '',
+    author: 'Code World Team',
+    date: '2026-02-05',
+    readTime: '12 min read',
+    category: 'Technology & Innovation',
+    tags: ['NASA', 'Space', 'Genesis Mission', 'Science'],
   },
 ];
 
@@ -89,7 +89,25 @@ const Blog = () => {
               {/* Blog Image */}
               <div className="h-48 overflow-hidden">
                 <img 
-                  src={post.slug === 'web3-blockchain-enterprise-integration'
+                  src={post.slug === 'nvidia-ai-chip-competition-analysis'
+                    ? 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'openai-xai-anthropic-ai-race'
+                    ? 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'nasa-genesis-mission-space-exploration'
+                    ? 'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'ai-market-trillion-dollar-future-2030'
+                    ? 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'ai-automation-business-transformation'
+                    ? 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'website-business-growth-catalyst'
+                    ? 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'moltbot-data-privacy-concerns'
+                    ? 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'moltbot-integration-security-risks'
+                    ? 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'moltbot-security-risks-local-ai'
+                    ? 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop'
+                    : post.slug === 'web3-blockchain-enterprise-integration'
                     ? 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop'
                     : post.slug === 'devops-automation-ci-cd-best-practices'
                     ? 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?q=80&w=1200&auto=format&fit=crop'
